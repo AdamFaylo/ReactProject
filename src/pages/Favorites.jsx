@@ -12,6 +12,7 @@ const Favorites = () => {
         style={{ direction: "rtl" }}
         className="card_grid"
       >
+        hahhah
         {movies.map((m) => (
           <MoviesItem key={m.id} movie={m} />
         ))}
