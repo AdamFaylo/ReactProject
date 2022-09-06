@@ -1,0 +1,40 @@
+.nav_top{
+    background: #0B2239 !important;
+    padding: 1rem;
+   
+}
+.spacer{
+   flex-grow: 1;
+}
+.img_logo{
+    width: 4rem;
+    border: rgb(255, 255, 255) solid 2px;
+}
+.btn_login{
+   margin: 1em;
+
+}
+.btn_taggle{
+    border-radius: 3rem;
+    width: 15px;
+    height: 25px;
+    display: flex;
+   
+    
+}
+.text_icon{
+    margin-left: 15px;
+    color:white !important;
+    display: flex;
+    align-items: center
+}
+.text_icon_m{
+    color: yellow;
+}
+
+.text_icon_a{
+    color: red;
+}
+.nav_link{
+    display: flex;
+}
