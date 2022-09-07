@@ -65,21 +65,3 @@ const MoviesItem = ({ movie }) => {
 
 export default MoviesItem;
 
-//  <div>
-//   <h2>{movie.title}</h2>
-//   <p>{movie.overview}</p>
-//   <button
-//     className="btn border-g-0"
-//     onClick={() => {
-//       console.log("DISPATCH taggle favorite", movie.id);
-//     }}
-//   >
-//     {movie.isFavorite && <FaHeart style={iconStyles} />}
-//     {!movie.isFavorite && <FaRegHeart style={iconStyles} />}
-//   </button>
-//   <img
-//     className="w-50 shadow-lg p-3 mb-5 bg-white rounded card"
-//     src={movie.poster_path}
-//     alt="movie poster"
-//   />
-// </div>;
