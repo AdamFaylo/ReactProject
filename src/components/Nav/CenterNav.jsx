@@ -2,11 +2,20 @@ import React from "react";
 import { Navbar, Container, Nav, NavLink } from "react-bootstrap";
 import TopNavLink from "./TopNavLink";
 import "../Nav/CenterNav.css";
+import DropDown, { DropDown2 } from "../DropDown";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { dropDownList } from "../../features/movies/moviesdropdown";
+
+
 
 const TopNav = () => {
   const styleNavCenter = {
   
   }
+
+  const dispatch = useDispatch()
+
   return (
     <Navbar expand="lg" className="container_nav">
       <Container>
@@ -16,11 +25,13 @@ const TopNav = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto nav_link">
             <TopNavLink to="/" label="Home"/>
-            <TopNavLink to="/movies" label="Movies" />
+           {/* <DropDown options = {dropDownList(dispatch)}/>*/}
+           <DropDown2/>
             <TopNavLink to="/favorites" label="Favorites" />
             <TopNavLink to="/about" label="About" />
           </Nav>
         </Navbar.Collapse>
+
       </Container>
     </Navbar>
   );

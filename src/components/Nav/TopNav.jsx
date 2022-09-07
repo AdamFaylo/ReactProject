@@ -3,7 +3,7 @@ import { Navbar, Container } from "react-bootstrap";
 import { NavLink, Link } from "react-router-dom";
 import "./TopNav.css";
 import {useDispatch , useSelector } from 'react-redux'
-import { toggleDark } from "../../reducers/DarkMode-Slice"
+import { toggleDark } from "../../features/DarkMode-Slice";
 import Logo from "../Media/Images/transparent-video-icon-multimedia-icon-film-strip-icon-5f8799e3a233a4.9927522916027222756644.png"
 
 const TopNav = () => {

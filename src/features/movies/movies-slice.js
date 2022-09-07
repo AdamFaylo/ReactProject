@@ -1,13 +1,14 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-const movieUrl =
-`https://api.themoviedb.org/3/discover/movie` + 
-`?api_key=b3b1492d3e91e9f9403a2989f3031b0c&language=en-us` +
-`&sort_by=popularity.desc` +
-`&include_adult=false` +
-`&with_genres=28` +
-`&include_video=false` +
-`&page=1` +
-`&with_watch_monetization_types=flatrate`
+const movieUrl = (category) => {
+    return `https://api.themoviedb.org/3/discover/movie` + 
+    `?api_key=b3b1492d3e91e9f9403a2989f3031b0c&language=en-us` +
+    `&sort_by=popularity.desc` +
+    `&include_adult=false` +
+    `&with_genres=${category}` +
+    `&include_video=false` +
+    `&page=1` +
+    `&with_watch_monetization_types=flatrate`
+}
 
 
 const imageUrl = (image_path) => `https://image.tmdb.org/t/p/original${image_path}`
@@ -18,9 +19,9 @@ const initialState = {
     error: '',
     loading: false
 }
-export const fetchMovies = createAsyncThunk('movie/fetch', () => {
+export const fetchMovies = createAsyncThunk('movie/fetch', (category) => {
     //return fetch url
-    return fetch(movieUrl,)
+    return fetch(movieUrl(category),)
         .then((response) => response.json())
         .then((json) => json.results)
         .then(movies => movies.map(m => ({
@@ -30,6 +31,7 @@ export const fetchMovies = createAsyncThunk('movie/fetch', () => {
             isFavorite: false
         })))
 })
+// fetchMovies()
 const moviesSlice = createSlice({
     name: "movie",
     initialState,
