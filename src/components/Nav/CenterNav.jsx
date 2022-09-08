@@ -2,10 +2,10 @@ import React from "react";
 import { Navbar, Container, Nav, NavLink } from "react-bootstrap";
 import TopNavLink from "./TopNavLink";
 import "../Nav/CenterNav.css";
-import DropDown, { DropDown2 } from "../DropDown";
-import { useNavigate } from "react-router-dom";
+import { DropDown2 } from "../DropDown";
+
 import { useDispatch } from "react-redux";
-import { dropDownList } from "../../features/movies/moviesdropdown";
+
 
 
 

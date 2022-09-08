@@ -32,7 +32,7 @@ const MoviesItem = ({ movie }) => {
       className="btn d-flex align-items-center flex-column btn_card"
       style={{ width: "15rem" }}
     >
-      <ToastContainer />
+      {/* <ToastContainer /> */}
       <div className="card-body">
       </div>
       <img

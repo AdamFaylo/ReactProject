@@ -6,9 +6,8 @@ import {
   NavDropdown,
   NavItem,
 } from "react-bootstrap";
-import DropdownItem from "react-bootstrap/esm/DropdownItem";
-import DropdownMenu from "react-bootstrap/esm/DropdownMenu";
-import DropdownToggle from "react-bootstrap/esm/DropdownToggle";
+import { useDispatch } from "react-redux";
+import { fetchMovies } from "../features/movies/movies-slice";
 
 const DropDown = ({ options }) => {
   // [{action,title,value?}] // Horror value = 30
@@ -38,15 +37,23 @@ const DropDown = ({ options }) => {
 };
 
 export const DropDown2 = () => {
+    const dispatch = useDispatch()
+    const changeCategory = (category) =>  dispatch(fetchMovies(category)) 
   return (
     <Dropdown>
       <Dropdown.Toggle variant="light" id="dropdown-basic">
-        Dropdown
+        Movies
       </Dropdown.Toggle>
-      <Dropdown.Menu>
-        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+      <Dropdown.Menu className="btn-dropdown">
+        <Dropdown.Item onClick={() => changeCategory('')}>All</Dropdown.Item>
+        <Dropdown.Item onClick={() => changeCategory('36')}>Action</Dropdown.Item>
+        <Dropdown.Item onClick={() => changeCategory('16')}>Horror</Dropdown.Item>
+        <Dropdown.Item onClick={() => changeCategory('6')}>Drama</Dropdown.Item>
+        <Dropdown.Item onClick={() => changeCategory('26')}>Comedy</Dropdown.Item>
+        <Dropdown.Item onClick={() => changeCategory('36')}>Action</Dropdown.Item>
+        <Dropdown.Item onClick={() => changeCategory('16')}>Horror</Dropdown.Item>
+        <Dropdown.Item onClick={() => changeCategory('6')}>Drama</Dropdown.Item>
+        <Dropdown.Item onClick={() => changeCategory('26')}>Comedy</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   );

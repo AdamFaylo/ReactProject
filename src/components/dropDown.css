@@ -1,3 +1,7 @@
-.m-dropdown{
- border: none !important;
+.btn-dropdown {
+  border: none !important;
+  background: none !important;
+}
+.m-dropdown:hover {
+  background: none !important;
 }

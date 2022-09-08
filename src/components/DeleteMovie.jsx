@@ -7,11 +7,11 @@ const DeleteMovie = ({ movie }) => {
   const styleDelete = {
     fontSize: "32px",
     position: "relative",
-    bottom: "29rem",
+    bottom: "25rem",
     right: "5rem",
     background: "none",
     border: "none",
-    color: "white"
+    color: "black"
   };
   const dispatch = useDispatch();
 
