@@ -10,7 +10,6 @@ const movieUrl = (category) => {
     `&with_watch_monetization_types=flatrate`
 }
 
-
 const imageUrl = (image_path) => `https://image.tmdb.org/t/p/original${image_path}`
 
 
@@ -31,13 +30,15 @@ export const fetchMovies = createAsyncThunk('movie/fetch', (category) => {
             isFavorite: false
         })))
 })
-// fetchMovies()
+// ----------------------------------------------------------------------//
 const moviesSlice = createSlice({
     name: "movie",
     initialState,
     reducers: {
-        addMovies: (state, action) => {
-            state.movies = action.payload;
+        deleteMovies: (state, action) => {
+            if(!action.payload || action.payload === null)
+                return
+            state.movies = state.movies.filter(movie => movie.id !== action.payload)
         },
         toggleFavorite: (state, { payload }) => {
             const index = state.movies.findIndex(m => m.id === payload)
@@ -72,6 +73,6 @@ const moviesSlice = createSlice({
 });
 
 export default moviesSlice.reducer;
-export const { toggleFavorite, addMovies, removeMovies } = moviesSlice.actions;
+export const { toggleFavorite, addMovies, deleteMovies } = moviesSlice.actions;
 
 // https://api.themoviedb.org/3/discover/movie?api_key=b3b1492d3e91e9f9403a2989f3031b0c&language=en-us&sort_by=popularity.desc&include_adult=false&with_genres=19&include_video=false&page=1&with_watch_monetization_types=flatrate

@@ -1,9 +1,10 @@
 import React from 'react'
-import "./Login.css"
+import "./Login.module.css"
 
 const Login = () => {
   return (
     <div>
+    
         <div className="background">
             <div className="shape"></div>
             <div className="shape"></div>

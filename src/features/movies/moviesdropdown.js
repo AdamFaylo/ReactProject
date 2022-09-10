@@ -17,10 +17,10 @@ export const dropDownList = (dispatch) => [
     
     {action: (category) => { dispatch(fetchMovies(category)) }, title:'Documentary',value:'99'},
   
-    {action: (category) => { dispatch(fetchMovies(category)) },title:'Drama',value:'18'},
-
-    {action: (category) => { dispatch(fetchMovies(category)) },title:'Comedy',value:'35'},
-
     {action: (category) => { dispatch(fetchMovies(category)) },title:'Family',value:'10751'},
+
+    {action: (category) => { dispatch(fetchMovies(category)) },title:'Fantasy',value:'14'},
+
+    {action: (category) => { dispatch(fetchMovies(category)) },title:'History',value:'36'},
 
   ]

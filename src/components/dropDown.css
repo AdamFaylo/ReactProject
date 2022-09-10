@@ -1,7 +1,9 @@
-.btn-dropdown {
-  border: none !important;
-  background: none !important;
+.d_down{
+  border:none;
 }
-.m-dropdown:hover {
-  background: none !important;
+.d_down:hover,.d_menu:hover {
+  border:none;
+}
+.d_menu {
+  border:none;
 }

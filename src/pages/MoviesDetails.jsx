@@ -6,7 +6,8 @@ import { toggleFavorite } from "../features/movies/movies-slice";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
-//https://api.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US
+import "../components/Grid.css"
+
 const MovieDetails = () => {
   const { movieId } = useParams();
   const navigate = useNavigate();
@@ -23,18 +24,8 @@ const MovieDetails = () => {
   }
 
   return (
-    <div
-      style={{ direction: "rtl" }}
-      className="btn border-0 d-flex flex-column align-items-center"
-    >
-      <button
-        className="btn btn-primary w-75"
-        onClick={() => {
-          navigate(-1);
-        }}
-      >
-        חזרה
-      </button>
+    <div style={{ direction: "rtl"}} className="card_controle btn border-0 d-flex flex-column align-items-center">
+      <button className="btn btn-primary w-25" onClick={() => { navigate(-1);}}> חזרה </button>
       <h2>פרטים לסרט - {movie.title}</h2>
       <ToastContainer />
       <p>{movie.overview}</p>

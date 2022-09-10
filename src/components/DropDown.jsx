@@ -1,13 +1,10 @@
 import React from "react";
 import {
   Dropdown,
-  DropdownButton,
-  Navbar,
-  NavDropdown,
-  NavItem,
 } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { fetchMovies } from "../features/movies/movies-slice";
+import "../components/dropDown.css"
 
 const DropDown = ({ options }) => {
   // [{action,title,value?}] // Horror value = 30
@@ -40,22 +37,25 @@ export const DropDown2 = () => {
     const dispatch = useDispatch()
     const changeCategory = (category) =>  dispatch(fetchMovies(category)) 
   return (
-    <Dropdown>
-      <Dropdown.Toggle variant="light" id="dropdown-basic">
+    <div>
+    <Dropdown className="d_down">
+      <Dropdown.Toggle variant="none" style={{border:'none',padding:'8px'}}>
         Movies
       </Dropdown.Toggle>
-      <Dropdown.Menu className="btn-dropdown">
+      <Dropdown.Menu className="d_menu">
         <Dropdown.Item onClick={() => changeCategory('')}>All</Dropdown.Item>
-        <Dropdown.Item onClick={() => changeCategory('36')}>Action</Dropdown.Item>
-        <Dropdown.Item onClick={() => changeCategory('16')}>Horror</Dropdown.Item>
-        <Dropdown.Item onClick={() => changeCategory('6')}>Drama</Dropdown.Item>
-        <Dropdown.Item onClick={() => changeCategory('26')}>Comedy</Dropdown.Item>
-        <Dropdown.Item onClick={() => changeCategory('36')}>Action</Dropdown.Item>
-        <Dropdown.Item onClick={() => changeCategory('16')}>Horror</Dropdown.Item>
-        <Dropdown.Item onClick={() => changeCategory('6')}>Drama</Dropdown.Item>
-        <Dropdown.Item onClick={() => changeCategory('26')}>Comedy</Dropdown.Item>
+        <Dropdown.Item onClick={() => changeCategory('28')}>Action</Dropdown.Item>
+        <Dropdown.Item onClick={() => changeCategory('12')}>Adventure</Dropdown.Item>
+        <Dropdown.Item onClick={() => changeCategory('16')}>Animation</Dropdown.Item>
+        <Dropdown.Item onClick={() => changeCategory('35')}>Comedy</Dropdown.Item>
+        <Dropdown.Item onClick={() => changeCategory('80')}>Crime</Dropdown.Item>
+        <Dropdown.Item onClick={() => changeCategory('99')}>Documentary</Dropdown.Item>
+        <Dropdown.Item onClick={() => changeCategory('10751')}>Family</Dropdown.Item>
+        <Dropdown.Item onClick={() => changeCategory('14')}>Fantasy</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
+    </div>
+   
   );
 };
 

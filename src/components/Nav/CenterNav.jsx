@@ -6,15 +6,10 @@ import { DropDown2 } from "../DropDown";
 
 import { useDispatch } from "react-redux";
 
-
-
-
 const TopNav = () => {
-  const styleNavCenter = {
-  
-  }
+  const styleNavCenter = {};
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   return (
     <Navbar expand="lg" className="container_nav">
@@ -24,14 +19,15 @@ const TopNav = () => {
         {/* --- */}
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto nav_link">
-            <TopNavLink to="/" label="Home"/>
-           {/* <DropDown options = {dropDownList(dispatch)}/>*/}
-           <DropDown2/>
+            <TopNavLink to="/" label="Home" />
+            {/* <DropDown options = {dropDownList(dispatch)}/>*/}
+            <div>
+              <DropDown2 />
+            </div>
             <TopNavLink to="/favorites" label="Favorites" />
             <TopNavLink to="/about" label="About" />
           </Nav>
         </Navbar.Collapse>
-
       </Container>
     </Navbar>
   );

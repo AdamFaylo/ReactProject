@@ -34,12 +34,9 @@ const MoviesItem = ({ movie }) => {
     >
       {/* <ToastContainer /> */}
       <div className="card-body">
+        
       </div>
-      <img
-        className="w-100 shadow-lg p-0 mb-5 bg-white rounded card"
-        src={movie.poster_path}
-        alt="movie poster"
-      />
+      <img className="w-100 shadow-lg p-0 mb-5 bg-white rounded card" src={movie.poster_path} alt="movie poster"/>
         <div className="btn_haert" onClick={(e) => {e.stopPropagation()
             if (!movie.isFavorite) {
               toast.success("Added", {
