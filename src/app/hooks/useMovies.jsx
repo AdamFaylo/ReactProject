@@ -6,7 +6,7 @@ const useMovies = (category) => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-      dispatch(fetchMovies(category));
+      dispatch(fetchMovies({category,page:1}));
     }, [dispatch]);
 }
 

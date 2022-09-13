@@ -5,11 +5,8 @@ export const Box = styled.div`
 padding: 60px 60px;
 background: rgb(40, 55, 77);
 // position: absolute;
-
 bottom: 0;
 width: 100%;
-
-
 @media (max-width: 1000px) {
 padding: 70px 30px;
 }
@@ -47,13 +44,11 @@ color: #fff;
 margin-bottom: 20px;
 font-size: 18px;
 text-decoration: none;
-
 &:hover {
 color: #f5707d;
 transition: 200ms ease-in;
 }
 `;
-
 export const Heading = styled.p`
 font-size: 24px;
 color: #f5707d;

@@ -14,7 +14,6 @@ import Login from "./components/Login/Login";
 function App() {
   const isDark = useSelector((state) => state.darkMode.isDark);
   const logIn = useSelector((state) => state.login.show);
-  console.log(logIn);
   useMovies();
   return (
     <>

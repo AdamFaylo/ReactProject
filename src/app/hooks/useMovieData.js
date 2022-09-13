@@ -14,7 +14,6 @@ export const useMovieData = (category) => {
     `&with_watch_monetization_types=flatrate` +
     `&with_genres=${category}`
 
-  console.log(urlCategory)
   useEffect(() => {
     fetch(
       urlCategory(category)

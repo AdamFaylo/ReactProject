@@ -18,7 +18,6 @@ const MovieDetails = () => {
     (m) => m.id === mid
   );
   const iconStyles = { color: "#FF008A", fontSize: "100px" };
-  console.log(movie);
   if (!movie) {
     return <Navigate to={"/"} />;
   }
@@ -61,6 +60,7 @@ const MovieDetails = () => {
         src={movie.backdrop_path}
         alt="movie poster"
       />
+      <video src={movie.video}></video>
     </div>
   );
 };

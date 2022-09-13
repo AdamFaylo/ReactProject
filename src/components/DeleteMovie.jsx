@@ -8,11 +8,11 @@ const DeleteMovie = ({ movie }) => {
     margin: "0",
     fontSize: "40px",
     position: "relative",
-    bottom: "22.8rem",
+    bottom: "27.5rem",
     left: "5rem",
     background: "none",
     border: "none",
-    color: "yellow"
+    color: "red"
   };
   const dispatch = useDispatch();
 

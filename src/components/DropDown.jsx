@@ -35,7 +35,7 @@ const DropDown = ({ options }) => {
 
 export const DropDown2 = () => {
     const dispatch = useDispatch()
-    const changeCategory = (category) =>  dispatch(fetchMovies(category)) 
+    const changeCategory = (category) =>  dispatch(fetchMovies({category,page:1})) 
   return (
     <div>
     <Dropdown className="d_down">

@@ -1,21 +1,22 @@
-import React from 'react';
-import { useMovieData } from '../app/hooks/useMovieData';
+import React from "react";
+import { useMovieData } from "../app/hooks/useMovieData";
 
 const MoviesGenre = ({ category }) => {
-    const [movies] = useMovieData( category );
-  console.log(category);
+  const styleAverage = {
+    background: "red",
+  };
+  const [movies] = useMovieData(category);
   return movies ? (
-   
-    <div >
-      <h2>{category}</h2>
+    <div>
       {movies.map((movie) => {
-       <p>{movie.title}</p>
+        (<h2>{category}</h2>),
+          (<p>{movie.title}</p>)
+          (<p>{video.title}</p>)
       })}
     </div>
-
-) : (
-  <div>error</div>
-);
+  ) : (
+    <div>error</div>
+  );
 };
 
 export default MoviesGenre;
