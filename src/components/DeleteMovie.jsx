@@ -18,11 +18,10 @@ const DeleteMovie = ({ movie }) => {
 
   const hendelleRemoveMovie = () => {
     dispatch(deleteMovies(movie.id));
-    console.log("remove")
   };
   return (
     <>
-      <button  style={styleDelete}>
+      <button style={styleDelete}>
         <TiDeleteOutline onClick={hendelleRemoveMovie}/>
       </button>
     </>

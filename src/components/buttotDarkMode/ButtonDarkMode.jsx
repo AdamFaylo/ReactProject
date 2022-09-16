@@ -4,15 +4,13 @@ import "../buttotDarkMode/buttonDarkMode.css"
 
 
 const ButtonDarkMode = () => {
-  
   return (
     <div>
       <div className="btn_container">
-        <input type="checkbox" id="darkmode-toggle" className="btn_darkMode"/>
+        <input type="checkbox" className="btn_darkMode"/>
         <label for="darkmode-toggle"></label>
       </div>
     </div>
   )
 };
-
 export default ButtonDarkMode;

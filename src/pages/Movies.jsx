@@ -29,7 +29,6 @@ const Movies = () => {
         <MovieItem key={m.id} movie={m} /> 
         ))}
         </div>}
-
         <NextPage onNextPage ={(page) => {
           dispatch(fetchMovies({category,page}))
         }}/>

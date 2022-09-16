@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
+import "./pages.css"
 
 
 export default React.memo(function Pages({onNextPage}) {
@@ -16,18 +17,17 @@ export default React.memo(function Pages({onNextPage}) {
 
   useEffect(() => {
 
-
     onNextPage(page)
   }, [page])
 
   return (
     <div className='next_page'>
-        <button onClick={()=>{
+        <button className='btn_next btn btn-info' onClick={()=>{
           nextPage()
-        }}>next</button>
-         <button onClick={()=>{
+        }}>Next</button>
+         <button className='btn_next btn btn-info' onClick={()=>{
            backPage()
-        }}>back</button>
+        }}>Back</button>
     </div>
   )
 })

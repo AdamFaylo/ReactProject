@@ -6,6 +6,7 @@ import {useDispatch , useSelector } from 'react-redux'
 import { toggleDark } from "../../features/DarkMode-Slice";
 import Logo from "../Media/Images/transparent-video-icon-multimedia-icon-film-strip-icon-5f8799e3a233a4.9927522916027222756644.png"
 import { toggleShow } from "../../features/LogInSlice";
+import ButtonDarkMode from "../buttotDarkMode/ButtonDarkMode";
 
 
 
@@ -29,10 +30,11 @@ const dispatch = useDispatch()
         <div className="spacer"></div>
         
         {/* btn darkmode */}
-        <button className={`${ isDark ? 'btn btn-info btn_taggle' : 'btn btn btn-light btn_taggle'}`} onClick={()=>{
+        <ButtonDarkMode className={`${ isDark ? 'btn btn-info btn_taggle' : 'btn btn btn-light btn_taggle'}`} onClick={()=>{
         dispatch(toggleDark())
-        }}></button>
+        }}></ButtonDarkMode>
        {isDark ? " " : " " }
+      
 
         <Link to={"/login"}>
         <button className="btn btn-outline-warning btn_login" onClick={()=>{

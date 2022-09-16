@@ -2,7 +2,7 @@ import React from "react";
 import { FaHeart, FaRegHeart} from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { toggleFavorite } from "../features/movies/movies-slice";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 // import Swal from "sweetalert2";
 import { useNavigate } from "react-router"
