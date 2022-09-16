@@ -25,6 +25,7 @@ const Movies = () => {
         <SearchInput/>
       {/* <NextPage/> */}
       {<div style={{direction:'rtl'}} className="card_grid">
+       
         {movies.map((m) => (
         <MovieItem key={m.id} movie={m} /> 
         ))}
