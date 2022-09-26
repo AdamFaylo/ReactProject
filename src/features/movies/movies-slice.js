@@ -1,4 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import Swal from 'sweetalert2';
+import axios, { Axios } from 'axios';
 
 const movieUrl = (category, page) => {
     return `https://api.themoviedb.org/3/discover/movie` +
@@ -22,21 +24,34 @@ const initialState = {
     filterMovie: [],
     video: false,
 }
-export const fetchMovies = createAsyncThunk('movie/fetch', ({category,page}) => {
+export const fetchMovies = createAsyncThunk('movie/fetch',async ({category,page}) => {
     const url = movieUrl(category, page)
-    console.log(url)
-    //return fetch url
-    return fetch(url)
-        .then((response) => response.json())
-        .then((json) => json.results)
-        .then(movies => movies.map(m => ({
+    const response = await axios.get(url);
+    return response.data.results.map(m => ({
             ...m,
             poster_path: imageUrl(m.poster_path),
             backdrop_path: imageUrl(m.backdrop_path),
             video: imageUrl(m.video),
-            isFavorite: false
-        })))
+             isFavorite: false
+         }))
+  
 })
+
+// export const fetchMovies = createAsyncThunk('movie/fetch', ({category,page}) => {
+//     const url = movieUrl(category, page)
+//     console.log(url)
+//     //return fetch url
+//     return fetch(url)
+//         .then((response) => response.json())
+//         .then((json) => json.results)
+//         .then(movies => movies.map(m => ({
+//             ...m,
+//             poster_path: imageUrl(m.poster_path),
+//             backdrop_path: imageUrl(m.backdrop_path),
+//             video: imageUrl(m.video),
+//             isFavorite: false
+//         })))
+// })
 // ----------------------------------------------------------------------//
 const moviesSlice = createSlice({
     name: "movie",
@@ -82,12 +97,12 @@ const moviesSlice = createSlice({
             state.movies = action.payload;
             state.filterMovie = action.payload;
             state.error = ''
-            // Swal.fire({
-            //     icon: 'success',
-            //     title: 'Movies loaded!',
-            //     showConfirmButton: false,
-            //     timer: 1500
-            // })
+            Swal.fire({
+                 icon: 'success',
+                 title: 'Movies loaded!',
+                 showConfirmButton: false,
+                 timer: 1500
+             })
         })
         builder.addCase(fetchMovies.rejected, (state, action) => {
             state.loading = false;
@@ -100,19 +115,3 @@ const moviesSlice = createSlice({
 
 export default moviesSlice.reducer;
 export const { toggleFavorite, addMovies, deleteMovies, nextPage, backPage, filterMovie } = moviesSlice.actions;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// https://api.themoviedb.org/3/discover/movie?api_key=b3b1492d3e91e9f9403a2989f3031b0c&language=en-us&sort_by=popularity.desc&include_adult=false&with_genres=19&include_video=false&page=1&with_watch_monetization_types=flatrate

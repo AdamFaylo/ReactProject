@@ -1,16 +1,19 @@
-import React from "react";
-import "../buttotDarkMode/buttonDarkMode.css"
+import {  Switch } from '@mantine/core';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleDark } from '../../features/DarkMode-Slice';
+import { IconSun, IconMoonStars } from '@tabler/icons';
 
 
-
-const ButtonDarkMode = () => {
+export default function SegmentedToggle() {
+  const isDark = useSelector(state => state.isDark) 
+  const dispatch = useDispatch()
   return (
-    <div>
-      <div className="btn_container">
-        <input type="checkbox" className="btn_darkMode"/>
-        <label for="darkmode-toggle"></label>
-      </div>
-    </div>
-  )
-};
-export default ButtonDarkMode;
+     <Switch  checked={isDark} 
+     onLabel={<IconSun/>}
+     color={isDark ? 'yelow' : 'red'}
+     offLabel={<IconMoonStars/>}
+     onChange={() => dispatch(toggleDark())} />
+  );
+}
+
+

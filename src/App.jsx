@@ -10,6 +10,7 @@ import CenterNav from "./components/Nav/CenterNav";
 import { useSelector } from "react-redux";
 import Footer from "./components/react-footer/Footer";
 import Login from "./components/Login/Login";
+import Comments from "./components/comment/Comments";
 
 function App() {
   const isDark = useSelector((state) => state.darkMode.isDark);
@@ -26,6 +27,7 @@ function App() {
           <Route path="/movies" element={<Movies catecory="general" />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/about" element={<About />} />
+          <Route path ="/comments" element={<Comments/>}/>
           <Route path="/movies/:movieId" element={<MoviesDetails />} />
         </Routes>
         <Footer />

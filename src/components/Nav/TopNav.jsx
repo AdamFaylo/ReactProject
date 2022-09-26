@@ -30,12 +30,8 @@ const dispatch = useDispatch()
         <div className="spacer"></div>
         
         {/* btn darkmode */}
-        <ButtonDarkMode className={`${ isDark ? 'btn btn-info btn_taggle' : 'btn btn btn-light btn_taggle'}`} onClick={()=>{
-        dispatch(toggleDark())
-        }}></ButtonDarkMode>
-       {isDark ? " " : " " }
-      
-
+        <ButtonDarkMode/>
+    
         <Link to={"/login"}>
         <button className="btn btn-outline-warning btn_login" onClick={()=>{
           dispatch(toggleShow())
