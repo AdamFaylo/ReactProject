@@ -38,9 +38,6 @@ const dispatch = useDispatch()
         }}>
           Login</button>
         </Link>
-
-      
-  
       </Container>
     </Navbar>
   );

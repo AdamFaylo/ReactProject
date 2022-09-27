@@ -20,7 +20,7 @@ const initialState = {
     movies: [],
     error: '',
     loading: false,
-    initialState: [1],
+    initialState: [],
     filterMovie: [],
     video: false,
 }
@@ -32,27 +32,11 @@ export const fetchMovies = createAsyncThunk('movie/fetch',async ({category,page}
             poster_path: imageUrl(m.poster_path),
             backdrop_path: imageUrl(m.backdrop_path),
             video: imageUrl(m.video),
-             isFavorite: false
+            isFavorite: false
          }))
   
 })
 
-// export const fetchMovies = createAsyncThunk('movie/fetch', ({category,page}) => {
-//     const url = movieUrl(category, page)
-//     console.log(url)
-//     //return fetch url
-//     return fetch(url)
-//         .then((response) => response.json())
-//         .then((json) => json.results)
-//         .then(movies => movies.map(m => ({
-//             ...m,
-//             poster_path: imageUrl(m.poster_path),
-//             backdrop_path: imageUrl(m.backdrop_path),
-//             video: imageUrl(m.video),
-//             isFavorite: false
-//         })))
-// })
-// ----------------------------------------------------------------------//
 const moviesSlice = createSlice({
     name: "movie",
     initialState,
@@ -115,3 +99,4 @@ const moviesSlice = createSlice({
 
 export default moviesSlice.reducer;
 export const { toggleFavorite, addMovies, deleteMovies, nextPage, backPage, filterMovie } = moviesSlice.actions;
+

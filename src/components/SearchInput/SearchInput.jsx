@@ -7,7 +7,7 @@ const SearchInput = () => {
  const dispatch = useDispatch();
 
   return (
-    <div className="search_style">
+    <div className="search_style container">
       {/* <h1>hello world</h1> */}
       <div className="input-group md-form form-sm form-2 pl-0">
         <input onChange={(e) => dispatch(filterMovie(e.target.value))}

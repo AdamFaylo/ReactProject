@@ -1,5 +1,5 @@
 .nav_top{
-    background: #0B2239 !important;
+    background: #1C3879!important;
     padding: 1rem;
    
 }
@@ -7,8 +7,8 @@
    flex-grow: 1;
 }
 .img_logo{
-    width: 4rem;
-    border: rgb(255, 255, 255) solid 2px;
+    width: 5rem;
+    border: rgba(255, 255, 255, 0.425) solid 2px;
 }
 
 .btn_taggle{
@@ -21,7 +21,7 @@
 }
 .text_icon{
     margin-left: 15px;
-    color:white !important;
+    color:rgb(255, 255, 255) !important;
     display: flex;
     align-items: center
 }
@@ -30,7 +30,7 @@
 }
 
 .text_icon_a{
-    color: red;
+    color: rgb(255, 0, 0);
 }
 .nav_link{
     display: flex;

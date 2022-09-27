@@ -19,13 +19,14 @@ const TopNav = () => {
         {/* --- */}
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto nav_link">
-            <TopNavLink to="/" label="Home" />
+            <TopNavLink to="/" label="Home " className="me-auto nav_link" />
             {/* <DropDown options = {dropDownList(dispatch)}/>*/}
             <div>
               <DropDown2 />
             </div>
             <TopNavLink to="/favorites" label="Favorites" />
             <TopNavLink to="/about" label="About" />
+            <TopNavLink to="/comments" label="Comment" />
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -1,7 +1,5 @@
 import React from "react";
-import {
-  Dropdown,
-} from "react-bootstrap";
+import { Dropdown } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { fetchMovies } from "../features/movies/movies-slice";
 import "../components/dropDown.css"

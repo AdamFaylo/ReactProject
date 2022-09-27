@@ -1,4 +1,6 @@
 .search_style{
-    padding-top: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
     display: flex;
+    width: 1024px;
 }

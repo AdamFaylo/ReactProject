@@ -22,12 +22,13 @@ export default React.memo(function Pages({onNextPage}) {
 
   return (
     <div className='next_page'>
+            <button className='btn_next btn btn-info' onClick={()=>{
+           backPage()
+        }}>Back</button>
         <button className='btn_next btn btn-info' onClick={()=>{
           nextPage()
         }}>Next</button>
-         <button className='btn_next btn btn-info' onClick={()=>{
-           backPage()
-        }}>Back</button>
+     
     </div>
   )
 })

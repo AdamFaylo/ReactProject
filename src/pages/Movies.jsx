@@ -14,14 +14,7 @@ const Movies = () => {
 
   return (
     <div className="card_controle container">
-       <select onChange={(e) => {
-        const category = e.target.value
-        dispatch(fetchMovies({category,page:1}))
-        setCategory(category)
-      }}>
-        <option value={'29'}>Horror</option>
-        <option value={'36'}>Action</option>
-      </select> 
+       
         <SearchInput/>
       {/* <NextPage/> */}
       {<div style={{direction:'rtl'}} className="card_grid">
@@ -38,3 +31,16 @@ const Movies = () => {
 };
 
 export default Movies;
+
+
+
+
+
+{/* <select onChange={(e) => {
+        const category = e.target.value
+        dispatch(fetchMovies({category,page:1}))
+        setCategory(category)
+      }}>
+        <option value={'29'}>Horror</option>
+        <option value={'36'}>Action</option>
+      </select>  */}
