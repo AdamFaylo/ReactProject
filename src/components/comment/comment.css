@@ -5,10 +5,10 @@ body {
   font-size: 11px;
 }
 .comment-text {
-  font-size: 12px;
+  font-size: 15px;
 }
 .fs-12 {
-  font-size: 12px;
+  font-size: 15px;
 }
 .shadow-none {
   box-shadow: black;
@@ -54,7 +54,7 @@ body {
     border-radius: 2px solid black;
 }
 .comment_botton{
-    padding: 3rem 2rem 1rem 2rem;
+    padding: 3rem 8rem 1rem 1rem;
+   
 }
-
 

@@ -8,8 +8,8 @@ const DeleteMovie = ({ movie }) => {
     margin: "0",
     fontSize: "40px",
     position: "relative",
-    bottom: "27.5rem",
-    left: "5rem",
+    bottom: "3.3rem",
+    right: "2.5rem",
     background: "none",
     border: "none",
     color: "red"

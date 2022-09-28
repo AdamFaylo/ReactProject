@@ -2,6 +2,7 @@ import React from "react";
 import { Dropdown } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { fetchMovies } from "../features/movies/movies-slice";
+import { Link } from "react-router-dom";
 import "../components/dropDown.css"
 
 const DropDown = ({ options }) => {
@@ -37,11 +38,13 @@ export const DropDown2 = () => {
   return (
     <div>
     <Dropdown className="d_down">
+    <Link to="/movies">
       <Dropdown.Toggle variant="none" style={{border:'none',padding:'8px'}}>
         Movies
       </Dropdown.Toggle>
-      <Dropdown.Menu className="d_menu">
-        <Dropdown.Item onClick={() => changeCategory('')}>All</Dropdown.Item>
+      </Link>
+      <Dropdown.Menu className="d_menu">        
+        <Dropdown.Item  onClick={() => changeCategory('')}>All</Dropdown.Item>
         <Dropdown.Item onClick={() => changeCategory('28')}>Action</Dropdown.Item>
         <Dropdown.Item onClick={() => changeCategory('12')}>Adventure</Dropdown.Item>
         <Dropdown.Item onClick={() => changeCategory('16')}>Animation</Dropdown.Item>

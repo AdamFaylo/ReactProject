@@ -28,15 +28,14 @@ const MoviesItem = ({ movie }) => {
     color: "white", 
     fontSize: "21px", 
     position: "relative", 
-    bottom: "25.2rem",
-    right: "7rem",
+    bottom: "24.2rem",
+    right: "5.2rem",
     textShadow: "2px 2px black",
     background: "black",
     borderRadius: "70rem 70rem 70rem 70rem",
     width: "30px",
     textAlign: "center",
   };
-
 
   return (
     
@@ -63,12 +62,7 @@ const MoviesItem = ({ movie }) => {
             } else {
               toast.error("Removed", {
                 position: "top-center",
-                style: { textAlign: "center" },
-              });
-            }
-            dispatch(toggleFavorite(movie.id));
-          }}
-        >
+                style: { textAlign: "center" },});}dispatch(toggleFavorite(movie.id));}}>
           {movie.isFavorite && <FaHeart style={iconStyles} />}
           {!movie.isFavorite && <FaRegHeart style={iconStyles} />}
           <div style={style_average}>{movie.vote_average}</div>

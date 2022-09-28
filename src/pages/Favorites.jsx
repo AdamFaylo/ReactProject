@@ -1,20 +1,19 @@
 import React from "react";
 import { useSelector } from "react-redux/es/exports";
-import MoviesItem from "../components/MovieItem";
+import MovieItemOne from "../components/MovieItemOne"
 import "../components/Grid.css"
+
 
 const Favorites = () => {
   
   const movies = useSelector((s) => s.movie.movies).filter(m=>m.isFavorite);
   return (
-    <div className="container">
+    <div>
       <div
         style={{ direction: "rtl" }}
-        className="card_grid"
-      >
-    
+        className="card_grid">
         {movies.map((m) => (
-          <MoviesItem key={m.id} movie={m}/>
+          <MovieItemOne key={m.id} movie={m}/>
         ))}
       </div>
     </div>

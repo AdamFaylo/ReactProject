@@ -1,11 +1,13 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import MovieItem from "../components/MovieItem";
+// import MovieItem from "../components/MovieItem";
 import "../components/Grid.css"
 import NextPage from "../components/NextPage/Pages";
 import { fetchMovies } from "../features/movies/movies-slice";
 import SearchInput from "../components/SearchInput/SearchInput";
 import { useState } from "react";
+import MovieItemOne from "../components/MovieItemOne"
+
 
 const Movies = () => {
   const movies = useSelector((s) => s.movie.filterMovie);
@@ -13,14 +15,14 @@ const Movies = () => {
   const [category,setCategory] = useState()
 
   return (
-    <div className="card_controle container">
+    <div className="card_controle">
        
         <SearchInput/>
       {/* <NextPage/> */}
       {<div style={{direction:'rtl'}} className="card_grid">
        
         {movies.map((m) => (
-        <MovieItem key={m.id} movie={m} /> 
+        <MovieItemOne key={m.id} movie={m} /> 
         ))}
         </div>}
         <NextPage onNextPage ={(page) => {
@@ -32,7 +34,7 @@ const Movies = () => {
 
 export default Movies;
 
-
+{/* <MovieItem key={m.id} movie={m} />  */}
 
 
 

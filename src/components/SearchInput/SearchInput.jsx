@@ -16,15 +16,6 @@ const SearchInput = () => {
           placeholder="Search"
           aria-label="Search"
         />
-        <div className="input-group-append">
-          <span className="btn btn-info input-group-text red lighten-3" id="basic-text1">
-            
-              <i className="fas fa-search text-grey" aria-hidden="true">
-                Click Here
-              </i>
-           
-          </span>
-        </div>
       </div>
     </div>
   );
