@@ -10,8 +10,6 @@ import DeleteMovie from "./DeleteMovie";
 // import "../components/MovieItem.css"
 import "../components/movieItemOne.css"
 
-
-
 const MoviesItem = ({ movie }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate()
@@ -30,8 +28,6 @@ const MoviesItem = ({ movie }) => {
     borderRadius: "70rem 70rem 70rem 70rem",
     width: "30px",
   };
-
-
   return (
     <div>
       <div class="container">

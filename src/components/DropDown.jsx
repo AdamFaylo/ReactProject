@@ -38,10 +38,10 @@ export const DropDown2 = () => {
   return (
     <div>
     <Dropdown className="d_down">
-    <Link to="/movies">
-      <Dropdown.Toggle variant="none" style={{border:'none',padding:'8px'}}>
-        Movies
-      </Dropdown.Toggle>
+      <Link to="/movies">
+        <Dropdown.Toggle variant="none" style={{border:'none',padding:'8px'}}>
+          Movies
+        </Dropdown.Toggle>
       </Link>
       <Dropdown.Menu className="d_menu">        
         <Dropdown.Item  onClick={() => changeCategory('')}>All</Dropdown.Item>
