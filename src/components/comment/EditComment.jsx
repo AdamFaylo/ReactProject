@@ -25,7 +25,7 @@ const EditComment = () => {
         <div className="justify-content-center">
           <div>
             
-            <div className="d-flex flex-column comment-section gap_comment">
+            <div className="gap_comment">
              <h1>Comments</h1>
               {comments.map((comment) => (
                 <div className="">

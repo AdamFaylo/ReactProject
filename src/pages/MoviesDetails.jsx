@@ -52,9 +52,7 @@ const MovieDetails = () => {
       <img
         className="w-50 shadow-lg p-3 mb-5 bg-white rounded card"
         src={movie.poster_path}
-        alt="movie poster"
-      />
-
+        alt="movie poster"/>
       <img
         className="w-50 shadow-lg p-3 mb-5 bg-white rounded card"
         src={movie.backdrop_path}
