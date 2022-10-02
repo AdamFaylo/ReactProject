@@ -32,9 +32,10 @@ export const fetchMovies = createAsyncThunk('movie/fetch',async ({category,page}
             poster_path: imageUrl(m.poster_path),
             backdrop_path: imageUrl(m.backdrop_path),
             video: imageUrl(m.video),
-            isFavorite: false
+            isFavorite: false,
+        
          }))
-  
+         
 })
 
 const moviesSlice = createSlice({

@@ -30,45 +30,44 @@ const MoviesItem = ({ movie }) => {
   };
   return (
     <div>
-      <div class="container">
-    <div class="cellphone-container"   onClick={()=>{
+      <div className="container">
+    <div className="cellphone-container"   onClick={()=>{
       navigate(`/movies/${movie.id}`)
       // Swal.fire("Clicked")
     }}>    
-      <div class="movie">       
-        <div class="menu"><i class="material-icons"></i></div>
+      <div className="movie">       
         <div>
-          <img class="movie-img" src={movie.poster_path} alt="" />
+          <img className="movie-img" src={movie.poster_path} alt="img movies" />
         </div>
-        <div class="text-movie-cont">
-          <div class="mr-grid">
-            <div class="col1">
+        <div className="text-movie-cont">
+          <div className="mr-grid">
+            <div className="col1">
               <h1>{movie.title}</h1>
-              <ul class="movie-gen">
+              <ul className="movie-gen">
                 <li>PG-13  /</li>
                 <li>2h 49min  /</li>
                 <li>Adventure, Drama, Sci-Fi,</li>
               </ul>
             </div>
           </div>
-          <div class="mr-grid summary-row">
-            <div class="col2">
+          <div className="mr-grid summary-row">
+            <div className="col2">
               <h5>SUMMARY</h5>
             </div>
-            <div class="col2">
-               <ul class="movie-likes">
-                <li><i class="material-icons">&#xE813;</i>{movie.vote_average}</li>
-                <li><i class="material-icons">&#xE813;</i>{movie.vote_count}</li>
+            <div className="col2">
+               <ul className="movie-likes">
+                <li><i className="material-icons">&#xE813;</i>{movie.vote_average}</li>
+                <li><i className="material-icons">&#xE813;</i>{movie.vote_count}</li>
               </ul>
             </div>
           </div>
-          <div class="mr-grid actors-row">
-            <div class="col1">
-              <p class="movie-actors">Matthew McConaughey, Anne Hathaway, Jessica Chastain</p>
+          <div className="mr-grid actors-row">
+            <div className="col1">
+              <p className="movie-actors">Matthew McConaughey, Anne Hathaway, Jessica Chastain</p>
             </div>
           </div>
-          <div class="mr-grid action-row">
-            <div class="col2"><div class="watch-btn"><h3><i class="material-icons">&#xE037;</i>WATCH TRAILER</h3></div>
+          <div className="mr-grid action-row">
+            <div className="col2"><div className="watch-btn"><h3><i className="material-icons">&#xE037;</i>WATCH TRAILER</h3></div>
             </div>
             <div className="btn_haert" onClick={(e) => {e.stopPropagation()
             if (!movie.isFavorite) {
