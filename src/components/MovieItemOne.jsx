@@ -30,9 +30,11 @@ const MoviesItem = ({ movie }) => {
   };
   return (
     <div>
-      <div className="container">
-    <div className="cellphone-container"   onClick={()=>{
-      navigate(`/movies/${movie.id}`)
+      <div>
+    <div className="cellphone-container" onClick={(e)=>{
+      
+      if(typeof(e.target.className) ==='object')return
+       navigate(`/movies/${movie.id}`)
       // Swal.fire("Clicked")
     }}>    
       <div className="movie">       
@@ -83,8 +85,10 @@ const MoviesItem = ({ movie }) => {
           {!movie.isFavorite && <FaRegHeart style={iconStyles} />}
           
         </div>
-           <DeleteMovie movie={movie}/>
+                <div className="delete_movie">
 
+           <DeleteMovie movie={movie}/>
+                  </div>
           </div>
         </div>
       </div>

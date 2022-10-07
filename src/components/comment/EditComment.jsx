@@ -10,7 +10,6 @@ import "./comment.css"
 const EditComment = () => {
   const comments = useSelector((state) => state.commentsReducer.comments);
   const dispatch = useDispatch();
-
   const [editting, setEditting] = useState({});
 
   useEffect(() => {

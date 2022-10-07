@@ -7,15 +7,18 @@ import { addComment } from "../../features/comments/comments-slice"
 const NewComment = () => {
   const dispatch = useDispatch()
   const addCommentSubmit = (e) => {
+   
     e.preventDefault()
     let name = e.target[1].value
     let comment = e.target[0].value
     let sharedPublicly = e.target[2].value
+    let date = e.target[3].value
     dispatch(addComment({
       id: v4(),
       userName: name,
       comment,
-      sharedPublicly
+      sharedPublicly,
+      
     }))
   }
   return (

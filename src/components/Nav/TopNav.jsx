@@ -3,7 +3,7 @@ import { Navbar, Container } from "react-bootstrap";
 import { NavLink, Link } from "react-router-dom";
 import "./TopNav.css";
 import {useDispatch , useSelector } from 'react-redux'
-import { toggleDark } from "../../features/DarkMode-Slice";
+// import { toggleDark } from "../../features/DarkMode-Slice";
 import Logo from "../Media/Images/transparent-video-icon-multimedia-icon-film-strip-icon-5f8799e3a233a4.9927522916027222756644.png"
 import { toggleShow } from "../../features/LogInSlice";
 import ButtonDarkMode from "../buttotDarkMode/ButtonDarkMode";
@@ -25,7 +25,7 @@ const dispatch = useDispatch()
         {/* BARD: LOGO + app name */}
         <NavLink to="/" className="navbar-brand justify-content-center nav_link">
           <img src={Logo} alt="Logo" className="img_logo"/>
-          <span className="text-muted text_icon"><h1 className="text_icon_m">M</h1>ovie <h1 className="text_icon_a"> A</h1>pp</span>
+          <span className="text-muted text_icon"><h1 className="text_icon_m">M</h1><p> ovie</p><h1 className="text_icon_a"> A</h1><p>pp</p></span>
         </NavLink>
         <div className="spacer"></div>
         

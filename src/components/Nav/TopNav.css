@@ -28,6 +28,12 @@
 .text_icon_m{
     color: yellow;
 }
+.text_icon>h1{
+    font-size: 2rem;
+}
+.text_icon>p{
+    margin: 0;
+}
 
 .text_icon_a{
     color: rgb(255, 0, 0);

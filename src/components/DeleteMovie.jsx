@@ -22,7 +22,7 @@ const DeleteMovie = ({ movie }) => {
   return (
     <>
       <button style={styleDelete}>
-        <TiDeleteOutline onClick={hendelleRemoveMovie}/>
+        <TiDeleteOutline onClick={hendelleRemoveMovie} className={'delete_btn_movie'}/>
       </button>
     </>
   );

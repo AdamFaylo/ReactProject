@@ -1,0 +1,195 @@
+.abuot_conatainer {
+  /* background-image: linear-gradient(
+    to left bottom,
+    #391128,
+    #4d2e44,
+    #614c5f,
+    #766a79,
+    #8e8993,
+    #9c9ba8,
+    #a9adbe,
+    #b5c0d3,
+    #a7cde9,
+    #8eddf8,
+    #70edfb,
+    #5ffbf1
+  ); */
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 1100px;
+}
+
+.about_controle {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: 400px 100px;  */
+  grid-template-areas:
+    "b a a"
+    "b a a";
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.about_controle > div:nth-child(1) {
+  grid-area: a;
+}
+.about_controle > div:nth-child(2) {
+  grid-area: b;
+}
+/* right main */
+.main_right > h1 {
+  font-size: 2rem;
+}
+.text_right {
+  color: white;
+  text-align: center;
+  background: #1e1b26;
+  padding-top: 1rem;
+}
+.text_decoration {
+  height: 2rem;
+  margin: 0;
+  width: 35rem;
+  text-align: center;
+}
+
+/* text about me */
+.text_right > span:nth-child(1) {
+  color: rgb(245, 78, 78);
+}
+.container_right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background: #1e1b26;
+}
+.container_right > div:nth-child(1) {
+  color: rgb(255, 255, 255);
+}
+.container_right > div:nth-child(2) {
+  color: rgb(255, 255, 255);
+}
+.container_right > div:nth-child(3) {
+  color: rgb(255, 255, 255);
+}
+.container_right > div:nth-child(4) {
+  color: rgb(255, 255, 255);
+}
+.text_resume {
+  padding: 2rem;
+  padding-left: 3rem;
+}
+.text_resume > p > span {
+  color: rgb(206, 206, 169);
+}
+.experience {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  justify-items: center;
+  align-items: center;
+  border: red;
+}
+.experience > div:nth-child(1) {
+  background: gray;
+  height: 6rem;
+  width: 9rem;
+  text-align: center;
+  border-radius: 5px;
+  padding-top: 1rem;
+  font-size: 12px;
+  box-shadow: 1px 1px 5px gray;
+}
+.experience > div:nth-child(2) {
+  background: gray;
+  height: 6rem;
+  width: 9rem;
+  text-align: center;
+  border-radius: 5px;
+  padding-top: 1rem;
+  font-size: 12px;
+  box-shadow: 1px 1px 5px gray;
+}
+.experience > div > h1 {
+  color: rgb(243, 243, 154);
+  font-size: 2rem;
+}
+.experience > div:nth-child(3) {
+  background: gray;
+  height: 6rem;
+  width: 9rem;
+  text-align: center;
+  border-radius: 5px;
+  padding-top: 1rem;
+  font-size: 12px;
+  box-shadow: 1px 1px 5px gray;
+}
+.experience > div:nth-child(4) {
+  background: gray;
+  height: 6rem;
+  width: 9rem;
+  text-align: center;
+  border-radius: 5px;
+  padding-top: 1rem;
+  font-size: 12px;
+  box-shadow: 1px 1px 5px gray;
+}
+
+/* left style */
+.main_left {
+  display: grid;
+  justify-items: center;
+  background: #2b2735;
+
+  padding-top: 1rem;
+}
+.main_left > h1 {
+  font-size: 2rem;
+  color: white;
+}
+.main_left > p {
+  font-size: 1rem;
+  color: white;
+  padding-bottom: 4rem;
+}
+.my_photo {
+  border-radius: 300px;
+  border: solid rgb(206, 206, 169) 5px;
+  box-shadow: 2px 5px 8px black;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+}
+
+/* info of my project */
+.info_project {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  text-align: center;
+  gap: 1rem;
+  color: white;
+  padding: 2rem;
+  grid-template-areas:
+    "a a a a"
+    "b b c c"
+    "d d e e";
+}
+.info_project > h1:nth-child(1) {
+  grid-area: a;
+  color: black;
+}
+.info_project > div:nth-child(1) {
+  grid-area: b;
+}
+.info_project > div:nth-child(1) {
+  grid-area: c;
+}
+.info_project > div:nth-child(1) {
+  grid-area: d;
+}
+.info_project > div:nth-child(1) {
+  grid-area: e;
+}
+.info_project > div {
+  border-radius: 8px;
+  background: #1e1b26;
+  box-shadow: 2px 2px 8px black;
+}

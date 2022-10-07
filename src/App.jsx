@@ -24,7 +24,7 @@ function App() {
         <CenterNav />
         {logIn && (<Login />)}
         <Routes>
-          <Route path="/" element={<Home/>} />
+          <Route path="/" element={<Home catecory="movies"/>} />
           <Route path="movies" element={<Movies catecory="movies" />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/about" element={<About />} />

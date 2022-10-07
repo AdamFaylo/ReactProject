@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { useState } from 'react'
 import "./pages.css"
 
-
 export default React.memo(function Pages({onNextPage}) {
     const [page,setPage] = useState(1)
     const nextPage =  () => {

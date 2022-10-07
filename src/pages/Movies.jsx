@@ -7,30 +7,59 @@ import { fetchMovies } from "../features/movies/movies-slice";
 import SearchInput from "../components/SearchInput/SearchInput";
 import { useState } from "react";
 import MovieItemOne from "../components/MovieItemOne"
+import { useQuery } from "../app/hooks/useSearchMovies";
+import { useEffect } from "react";
+import { selectedMovie } from "../features/movies/searchMovies-slice";
 
 
 const Movies = () => {
+  const value = useSelector(state=>state.search.moviesSearched)
   const movies = useSelector((s) => s.movie.filterMovie);
   const dispatch = useDispatch()
   const [category,setCategory] = useState()
+  const [searchedQuary] = useQuery(selectedMovie)
+  useEffect(()=>{
 
-  return (
-    <div className="card_controle">
-       
-        <SearchInput/>
-      {/* <NextPage/> */}
-      {<div style={{direction:'rtl'}} className="card_grid">
-       
-        {movies.map((m) => (
-        <MovieItemOne key={m.id} movie={m} /> 
-        ))}
-        </div>}
-        <NextPage onNextPage ={(page) => {
-          dispatch(fetchMovies({category,page}))
-        }}/>
-    </div>
-  );
-};
+  },[])
+  if(value==false){
+
+    return  (
+     
+      <div className="card_controle">
+         
+          <SearchInput/>
+        {/* <NextPage/> */}
+        {<div style={{direction:'rtl'}} className="card_grid">
+         
+          {movies.map((m) => (
+          <MovieItemOne key={m.id} movie={m} /> 
+          ))}
+          </div>}
+          <NextPage onNextPage ={(page) => {
+            dispatch(fetchMovies({category,page}))
+          }}/>
+      </div>
+    );
+  }else{
+    return  (
+      <div className="card_controle">
+        
+         
+          <SearchInput/>
+        {/* <NextPage/> */}
+        {<div style={{direction:'rtl'}} className="card_grid">
+         
+          {searchedQuary.map((m) => (
+          <MovieItemOne key={m.id} movie={m} /> 
+          ))}
+          </div>}
+          <NextPage onNextPage ={(page) => {
+            dispatch(fetchMovies({category,page}))
+          }}/>
+      </div>
+    );
+  }
+  }
 
 export default Movies;
 

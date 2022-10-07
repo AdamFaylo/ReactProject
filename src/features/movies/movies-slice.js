@@ -16,15 +16,10 @@ const movieUrl = (category, page) => {
 const imageUrl = (image_path) => `https://image.tmdb.org/t/p/original${image_path}`
 
 
-const initialState = {
-    movies: [],
-    error: '',
-    loading: false,
-    initialState: [],
-    filterMovie: [],
-    video: false,
-}
-export const fetchMovies = createAsyncThunk('movie/fetch',async ({category,page}) => {
+
+export const fetchMovies = createAsyncThunk(
+    'movie/fetch',
+    async({category,page}) => {
     const url = movieUrl(category, page)
     const response = await axios.get(url);
     return response.data.results.map(m => ({
@@ -33,14 +28,24 @@ export const fetchMovies = createAsyncThunk('movie/fetch',async ({category,page}
             backdrop_path: imageUrl(m.backdrop_path),
             video: imageUrl(m.video),
             isFavorite: false,
-        
+           
          }))
          
 })
+const initialState = {
+    movies: [],
+    error: '',
+    loading: false,
+    initialState: [],
+    filterMovie: [],
+    video: false,
+}
+
 
 const moviesSlice = createSlice({
     name: "movie",
     initialState,
+    searchMovies:[],
     reducers: {
         addMovies: (state, action) => {
             state.movies = action.payload;
@@ -59,16 +64,20 @@ const moviesSlice = createSlice({
                 state.filterMovie[index].isFavorite = !state.filterMovie[index].isFavorite
             }
         },
-        filterMovie: (state, { payload }) => {
-            payload = payload.toLowerCase()
-            // state.movies=state.movies.filter(x=> x.title.includes(payload))
-            if (!payload || payload === null || payload.trim().length < 1) { // user didnt enter anything
-                state.filterMovie = [ ...state.movies ]
-                return;
-            }
-            state.filterMovie = state.movies.filter(x => x.title.toLowerCase().includes(payload))
-            console.log(payload);
+        serachMovies: (state,action)=>{
+            state.searchedJobs = [];
+            state.searchedJobs.push(action.payload)
         },
+        // filterMovie: (state, { payload }) => {
+        //     payload = payload.toLowerCase()
+        //     // state.movies=state.movies.filter(x=> x.title.includes(payload))
+        //     if (!payload || payload === null || payload.trim().length < 1) { // user didnt enter anything
+        //         state.filterMovie = [ ...state.movies ]
+        //         return;
+        //     }
+        //     state.filterMovie = state.movies.filter(x => x.title.toLowerCase().includes(payload))
+        //     console.log(payload);
+        // },
         sortAzMovies: (state, action) => {
             state.movies.sort((a, b) => (b.title < a.title ? 1 : -1));
           },
