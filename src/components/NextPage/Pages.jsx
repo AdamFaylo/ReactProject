@@ -13,7 +13,6 @@ export default React.memo(function Pages({onNextPage}) {
       }
       setPage(p => p-1)
   }
-
   useEffect(() => {
 
     onNextPage(page)
@@ -27,7 +26,6 @@ export default React.memo(function Pages({onNextPage}) {
         <button className='btn_next btn btn-info' onClick={()=>{
           nextPage()
         }}>Next</button>
-     
     </div>
   )
 })

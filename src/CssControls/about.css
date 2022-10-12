@@ -1,28 +1,12 @@
 .abuot_conatainer {
-  /* background-image: linear-gradient(
-    to left bottom,
-    #391128,
-    #4d2e44,
-    #614c5f,
-    #766a79,
-    #8e8993,
-    #9c9ba8,
-    #a9adbe,
-    #b5c0d3,
-    #a7cde9,
-    #8eddf8,
-    #70edfb,
-    #5ffbf1
-  ); */
   margin: 0 auto;
   max-width: 1100px;
   width: 1100px;
+  border-radius: 1rem;
 }
-
 .about_controle {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* grid-template-rows: 400px 100px;  */
   grid-template-areas:
     "b a a"
     "b a a";
@@ -42,8 +26,9 @@
 .text_right {
   color: white;
   text-align: center;
-  background: #1e1b26;
+  background: #bababa;
   padding-top: 1rem;
+  border-radius: 0px 15px 0px 0px;
 }
 .text_decoration {
   height: 2rem;
@@ -59,7 +44,9 @@
 .container_right {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  background: #1e1b26;
+  background: rgb(36, 36, 36);
+  border: solid black 1px;
+  border-radius: 0px 0px 15px 0px;
 }
 .container_right > div:nth-child(1) {
   color: rgb(255, 255, 255);
@@ -136,17 +123,18 @@
 .main_left {
   display: grid;
   justify-items: center;
-  background: #2b2735;
-
-  padding-top: 1rem;
+  /* background: #2b2735; */
+  padding-top: 2rem;
+  border: solid black 2px;
+  border-radius: 15px 0px 0px 15px;
 }
 .main_left > h1 {
   font-size: 2rem;
-  color: white;
+  color: black;
 }
 .main_left > p {
   font-size: 1rem;
-  color: white;
+  color: black;
   padding-bottom: 4rem;
 }
 .my_photo {

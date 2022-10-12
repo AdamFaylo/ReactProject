@@ -1,8 +1,8 @@
 import React from "react";
 import './FooterStyles'
 import {Box,Container,Row,Column,FooterLink,Heading} from "./FooterStyles";
-import { FaFacebook } from "react-icons/fa";
-import { AiFillInstagram, AiFillTwitterCircle, AiFillYoutube } from "react-icons/ai";
+import { FaFacebook} from "react-icons/fa";
+import { AiFillTwitterCircle, AiFillGithub } from "react-icons/ai";
 const Footer = () => {
 return (
 	<Box>
@@ -30,31 +30,24 @@ return (
 		</Column>
 		<Column>
 			<Heading> Social Media</Heading>
-			<FooterLink href="#">
-			<i className="fab fa-facebook-f">
+			<FooterLink href="https://www.facebook.com/" target="_blank">
+			<i>
 				<span style={{ marginLeft: "10px" }}>
 				<FaFacebook/> Facebook
 				</span>
 			</i>
 			</FooterLink>
-			<FooterLink href="#">
-			<i className="fab fa-instagram">
-				<span style={{ marginLeft: "10px" }}>
-				<AiFillInstagram/> Instagram
+			<FooterLink href="https://github.com/AdamFaylo" target="_blank">
+			<i>
+				<span>
+				<AiFillGithub/> github
 				</span>
 			</i>
 			</FooterLink>
-			<FooterLink href="#">
-			<i className="fab fa-twitter">
+			<FooterLink href="#" target="_blank">
+			<i>
 				<span style={{ marginLeft: "10px" }}>
 				<AiFillTwitterCircle/> Twitter
-				</span>
-			</i>
-			</FooterLink>
-			<FooterLink href="#">
-			<i className="fab fa-youtube">
-				<span style={{ marginLeft: "10px" }}>
-				<AiFillYoutube/> Youtube
 				</span>
 			</i>
 			</FooterLink>

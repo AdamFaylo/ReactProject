@@ -15,22 +15,18 @@ const movieUrl = (category, page) => {
 
 const imageUrl = (image_path) => `https://image.tmdb.org/t/p/original${image_path}`
 
-
-
 export const fetchMovies = createAsyncThunk(
     'movie/fetch',
-    async({category,page}) => {
-    const url = movieUrl(category, page)
-    const response = await axios.get(url);
-    return response.data.results.map(m => ({
+    async ({ category, page }) => {
+        const url = movieUrl(category, page)
+        const response = await axios.get(url);
+        return response.data.results.map(m => ({
             ...m,
             poster_path: imageUrl(m.poster_path),
             backdrop_path: imageUrl(m.backdrop_path),
             video: imageUrl(m.video),
             isFavorite: false,
-           
-         }))
-         
+        }))
 })
 const initialState = {
     movies: [],
@@ -41,11 +37,10 @@ const initialState = {
     video: false,
 }
 
-
 const moviesSlice = createSlice({
     name: "movie",
     initialState,
-    searchMovies:[],
+    searchMovies: [],
     reducers: {
         addMovies: (state, action) => {
             state.movies = action.payload;
@@ -64,7 +59,7 @@ const moviesSlice = createSlice({
                 state.filterMovie[index].isFavorite = !state.filterMovie[index].isFavorite
             }
         },
-        serachMovies: (state,action)=>{
+        serachMovies: (state, action) => {
             state.searchedJobs = [];
             state.searchedJobs.push(action.payload)
         },
@@ -80,11 +75,11 @@ const moviesSlice = createSlice({
         // },
         sortAzMovies: (state, action) => {
             state.movies.sort((a, b) => (b.title < a.title ? 1 : -1));
-          },
+        },
         sortZaMovies: (state, action) => {
             state.movies.sort((a, b) => (b.vote_average > a.vote_average ? 1 : -1));
-          },
-      
+        },
+
     },
     extraReducers: (builder) => {
         builder.addCase(fetchMovies.pending, (state) => {
@@ -99,11 +94,11 @@ const moviesSlice = createSlice({
             state.filterMovie = action.payload;
             state.error = ''
             Swal.fire({
-                 icon: 'success',
-                 title: 'Movies loaded!',
-                 showConfirmButton: false,
-                 timer: 1500
-             })
+                icon: 'success',
+                title: 'Movies loaded!',
+                showConfirmButton: false,
+                timer: 1500
+            })
         })
         builder.addCase(fetchMovies.rejected, (state, action) => {
             state.loading = false;
@@ -115,5 +110,5 @@ const moviesSlice = createSlice({
 });
 
 export default moviesSlice.reducer;
-export const { toggleFavorite, addMovies, deleteMovies, nextPage, backPage, filterMovie, sortAzMovies, sortZaMovies} = moviesSlice.actions;
+export const { toggleFavorite, addMovies, deleteMovies, nextPage, backPage, filterMovie, sortAzMovies, sortZaMovies } = moviesSlice.actions;
 

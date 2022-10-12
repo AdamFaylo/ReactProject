@@ -44,7 +44,7 @@ export const DropDown2 = () => {
         </Dropdown.Toggle>
       </Link>
       <Dropdown.Menu className="d_menu">        
-        <Dropdown.Item  onClick={() => changeCategory('')}>All</Dropdown.Item>
+        <Dropdown.Item onClick={() => changeCategory('')}>All</Dropdown.Item>
         <Dropdown.Item onClick={() => changeCategory('28')}>Action</Dropdown.Item>
         <Dropdown.Item onClick={() => changeCategory('12')}>Adventure</Dropdown.Item>
         <Dropdown.Item onClick={() => changeCategory('16')}>Animation</Dropdown.Item>

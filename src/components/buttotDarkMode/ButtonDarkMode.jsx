@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toggleDark } from '../../features/DarkMode-Slice';
 import { IconSun, IconMoonStars } from '@tabler/icons';
 
-
 export default function SegmentedToggle() {
   const styleDarkMode  = {
     padding: "2rem",
@@ -26,5 +25,3 @@ export default function SegmentedToggle() {
 
   );
 }
-
-

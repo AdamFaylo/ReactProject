@@ -43,8 +43,6 @@ const Movies = () => {
   }else{
     return  (
       <div className="card_controle">
-        
-         
           <SearchInput/>
         {/* <NextPage/> */}
         {<div style={{direction:'rtl'}} className="card_grid">

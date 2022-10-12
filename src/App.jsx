@@ -4,7 +4,8 @@ import TopNav from "./components/Nav/TopNav";
 import About from "./pages/About";
 import Favorites from "./pages/Favorites";
 import Movies from "./pages/Movies";
-import MoviesDetails from "./pages/MoviesDetails";
+// import MoviesDetails from "./pages/MoviesDetails";
+import MoviesDetailsDemo from "../src/pages/MoviesDetailsDemo" 
 import useMovies from "./app/hooks/useMovies";
 import CenterNav from "./components/Nav/CenterNav";
 import { useSelector } from "react-redux";
@@ -29,7 +30,8 @@ function App() {
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/about" element={<About />} />
           <Route path ="/comments" element={<Comments/>}/>
-          <Route path="/movies/:movieId" element={<MoviesDetails />} />
+          {/* <Route path="/movies/:movieId" element={<MoviesDetails />} /> */}
+          <Route path="/movies/:movieId" element={<MoviesDetailsDemo />} />
         </Routes>
         <Footer />
       </div>
