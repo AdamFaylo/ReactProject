@@ -1,9 +1,8 @@
 import React from "react";
 import { Navbar, Container, Nav, NavLink } from "react-bootstrap";
 import TopNavLink from "./TopNavLink";
-import "../Nav/CenterNav.css";
+import "../CssControls/center-nav.css";
 import { DropDown2 } from "../DropDown";
-
 import { useDispatch } from "react-redux";
 
 const TopNav = () => {
@@ -16,11 +15,9 @@ const TopNav = () => {
       <Container>
         <NavLink to="/" className="navbar-brand logo-icon "></NavLink>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        {/* --- */}
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto nav_link">
             <TopNavLink to="/" label="Home " className="me-auto nav_link" />
-            {/* <DropDown options = {dropDownList(dispatch)}/>*/}
             <div>
               <DropDown2 />
             </div>

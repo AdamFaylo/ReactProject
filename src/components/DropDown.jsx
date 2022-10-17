@@ -3,7 +3,7 @@ import { Dropdown } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { fetchMovies } from "../features/movies/movies-slice";
 import { Link } from "react-router-dom";
-import "../components/dropDown.css"
+import "../components/CssControls/dropDown.css"
 
 const DropDown = ({ options }) => {
   // [{action,title,value?}] // Horror value = 30

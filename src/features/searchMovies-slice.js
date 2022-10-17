@@ -19,3 +19,4 @@ const searchMoviesSlice = createSlice({
 export const { queryMovies } = searchMoviesSlice.actions;
 export const selectedMovie =(state)=> state.moviesSearched.moviesSearched
 export default searchMoviesSlice.reducer;
+

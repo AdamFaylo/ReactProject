@@ -1,14 +1,20 @@
+.container_card{
+  margin: 0 auto;
+  display: ;
+  gap: 2rem;
+  
+}
 .cellphone-container {
-  width: 300px;
-  height: 620px;
-  background-color: #1e1b26;
+  width: 280px;
+  height: 615px;
+  background-color: #26212b;
   margin: 40px auto 0 auto;
   box-shadow: 5px 5px 115px -14px black;
   border-radius: 4px;
 }
 
 .movie-img {
-  width: 100%;
+  width: 280px;
   height: 380px;
   background-position: center;
   background-repeat: no-repeat;
@@ -62,7 +68,7 @@
   border: 1px solid #fe4141;
   border-radius: 5px;
   padding: 4px;
-  width: 140px;
+  width: 120px;
 }
 .watch-btn h3 i {
   font-size: 14px;
@@ -98,7 +104,7 @@ h1 {
 }
 
 h3 {
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 400;
   color: #fe4141;
 }
@@ -262,4 +268,10 @@ h5 {
   bottom: 15px;
   right: 15px;
   border-radius: 50px;
+}
+
+
+/* media query  */
+@media (max-width: 500px){
+  
 }

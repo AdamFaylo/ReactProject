@@ -59,19 +59,9 @@ const moviesSlice = createSlice({
                 state.filterMovie[index].isFavorite = !state.filterMovie[index].isFavorite
             }
         },
-        serachMovies: (state, action) => {
-            state.searchedJobs = [];
-            state.searchedJobs.push(action.payload)
-        },
-        // filterMovie: (state, { payload }) => {
-        //     payload = payload.toLowerCase()
-        //     // state.movies=state.movies.filter(x=> x.title.includes(payload))
-        //     if (!payload || payload === null || payload.trim().length < 1) { // user didnt enter anything
-        //         state.filterMovie = [ ...state.movies ]
-        //         return;
-        //     }
-        //     state.filterMovie = state.movies.filter(x => x.title.toLowerCase().includes(payload))
-        //     console.log(payload);
+        // serachMovies: (state, action) => {
+        //     state.searchedJobs = [];
+        //     state.searchedJobs.push(action.payload)
         // },
         sortAzMovies: (state, action) => {
             state.movies.sort((a, b) => (b.title < a.title ? 1 : -1));

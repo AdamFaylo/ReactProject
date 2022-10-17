@@ -1,5 +1,5 @@
 import React from "react";
-import "../CssControls/about.css"
+import "../../src/components/CssControls/about.css"
 import MyPhoto from "../components/Media/Images/adam_faylo.png"
 
 const About = () => {

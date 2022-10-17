@@ -55,3 +55,10 @@ color: #f5707d;
 margin-bottom: 40px;
 font-weight: bold;
 `;
+export const BoxSocial = styled.div`
+display: flex;
+justify-content: center;
+text-align: center;
+justify-content: space-around;
+
+`;

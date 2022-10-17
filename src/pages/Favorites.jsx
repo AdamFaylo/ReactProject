@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux/es/exports";
-import MovieItemOne from "../components/MovieItemOne"
-import "../components/Grid.css"
+import MovieItemOne from "../components/MovieItem"
+import "../components/CssControls/grid.css"
 
 
 const Favorites = () => {
