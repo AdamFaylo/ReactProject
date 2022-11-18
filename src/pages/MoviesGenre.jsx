@@ -2,9 +2,6 @@ import React from "react";
 import { useMovieData } from "../app/hooks/useMovieData";
 
 const MoviesGenre = ({ category }) => {
-  const styleAverage = {
-    background: "red",
-  };
   const [movies] = useMovieData(category);
   return movies ? (
     <div>

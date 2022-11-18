@@ -3,12 +3,9 @@ import { Navbar, Container } from "react-bootstrap";
 import { NavLink, Link } from "react-router-dom";
 import "../CssControls/top-nav.css";
 import {useDispatch , useSelector } from 'react-redux'
-// import { toggleDark } from "../../features/DarkMode-Slice";
-import Logo from "../Media/Images/transparent-video-icon-multimedia-icon-film-strip-icon-5f8799e3a233a4.9927522916027222756644.png"
+import Logo from "../Media/Images/pngwing.com (2).png"
 import { toggleShow } from "../../features/LogInSlice";
 import ButtonDarkMode from "../buttotDarkMode/ButtonDarkMode";
-
-
 
 const TopNav = () => {
 const isDark = useSelector(state => state.darkMode.isDark);
@@ -31,7 +28,6 @@ const dispatch = useDispatch()
         
         {/* btn darkmode */}
         <ButtonDarkMode/>
-    
         <Link to={"/login"}>
         <button className="btn btn-outline-warning btn_login" onClick={()=>{
           dispatch(toggleShow())

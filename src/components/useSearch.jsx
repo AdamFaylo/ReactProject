@@ -1,8 +1,9 @@
-import React from "react"
-import axios from "axios"
-import { useState } from "react"
-
-
+import React from "react";
+import axios from "axios";
+import { useState } from "react";
+import "../components/CssControls/movie-item.css"
+import { filterMovie, imageUrl } from "../features/movies/movies-slice";
+import { useDispatch } from "react-redux";
 
 const searchUrl = (type,query) => {
     return `https://api.themoviedb.org/3/search/${type}` +
@@ -11,26 +12,35 @@ const searchUrl = (type,query) => {
 }
 
 export const useSearch = (type) => {
-    const [results, setSearchResults] = useState([])
 
+    const dispatch = useDispatch()
     return {
         search: (query) => {
+            if(!query)
+                return dispatch(filterMovie([]))
+            
              const url = searchUrl(type,query)
                 axios.get(url)
                     .then(response => response.data)
                     .then(data => data.results)
-                    .then(setSearchResults)
+                    .then(results =>{
+                        dispatch(filterMovie(results.map(m => ({
+                            ...m,
+                            poster_path: imageUrl(m.poster_path),
+                            backdrop_path: imageUrl(m.backdrop_path),
+                            video: imageUrl(m.video),
+                            isFavorite: false,
+                        }))))
+                    })
                     .catch(console.log)
-        },
-        results
+        }
     }
 }
 
-export const MOVIE_SEARCH = "movie"
-export const PEOPLE_SEARCH = "person"
-const MULTI_SEARCH = "multi"
-const COMPANY_SEARCH = "company"
-
+export const MOVIE_SEARCH = "movie";
+export const PEOPLE_SEARCH = "person";
+const MULTI_SEARCH = "multi";
+const COMPANY_SEARCH = "company";
 
 const SearchResults = ({type,results}) => {
 
@@ -57,20 +67,16 @@ return  <React.Fragment>
 
 export const MovieSearchComponent = ({type}) => {
 
-    const { search, results } = useSearch(type)
+    const { search } = useSearch(type)
 
-    const doSearch = (formEvent) => {
-        formEvent.preventDefault()
-        let searchQuery = formEvent.target[0].value
+    const doSearch = (e) => {
+        let searchQuery = e.target.value
         search(searchQuery)
     }
-    return <div>
-
-        <form onSubmit={doSearch}>
-        <input type="text" placeholder="Search.."/>
-        <button type="submit">Search</button>
-        </form>
-        <SearchResults {...{type, results}}/>
+    return <div >
+        <input className="search_movie" onChange={doSearch} type="text" placeholder="Search.."/>
     </div>
 
 }
+
+

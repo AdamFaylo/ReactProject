@@ -1,11 +1,12 @@
-.next_page{
-    display: flex;
-    justify-content: center;
-    padding: 2rem 2rem;
-    /* width: 150px; */
-    color: darkorange;
+.next_page {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 2rem;
+  color: darkorange;
 }
-.btn_next, .btn_next{
-    width: 150px;
-    color: black;
+.btn_next,
+.btn_next {
+  width: 150px;
+  color: black;
+  margin: 1.5rem;
 }

@@ -28,7 +28,6 @@ const initialState = {
         },
     ]
 }
-
 const commentsSlice = createSlice({
     name: "comment",
     initialState,

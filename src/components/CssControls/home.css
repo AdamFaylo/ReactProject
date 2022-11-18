@@ -1,4 +1,52 @@
-* {
+.top_main {
+  margin: 0 auto;
+  width: 1024px;
+  max-width: 1024px;
+  color: white;
+  height: 100%;
+}
+.img_style {
+  background: url(../Media/Images/georgia-vagim-ny-lHmsHYHk-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 345px;
+}
+.main_2 {
+  background: #323232;
+  height: 294px;
+}
+.main_3 {
+  background: url(../Media/Images/mitch-nielsen-VUDJjCRXbHQ-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 345px;
+}
+.main_4 {
+  background: #f0f0f0;
+  height: 250px;
+}
+.main_5 {
+  background: #e0b943;
+  width: 700px;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+  bottom: 18rem;
+}
+
+.main_6 {
+  color: black;
+  height: 250px;
+  position: relative;
+  bottom: 6.2rem;
+  border: solid 2px black;
+}
+/* background: #e0b943ce; */
+
+/* * {
+  f0f0f0
     margin: 0; 
     padding: 0;
   }
@@ -72,8 +120,8 @@
   so total container width = 640 + 40*4 = 800px;
   default width = 800/5 = 160px;
   */
-  
-  .accordion {
+
+/* .accordion {
     width: 800px; height: 320px;
     overflow: hidden;
     margin: 100px auto;
@@ -130,4 +178,4 @@
     nav {
       background: pink; 
     }
-  }
+  }  */

@@ -23,7 +23,7 @@ const NewComment = () => {
   return (
     <div className="new_comment">
       <form onSubmit={addCommentSubmit}>
-        <div className="comment_left">
+        <div>
           <div>  
             <textarea className="text_comment" placeholder=" New Comment . . ." required type="text"></textarea>
           </div>
@@ -42,32 +42,3 @@ const NewComment = () => {
 };
 
 export default NewComment;
-
-
-{/* <img
-              className="img_style"
-              src="https://i.imgur.com/RpzrMR2.jpg"
-              width="45"
-            /> */}
-         
-            
-    //         <div className="new_comment">
-    //   <form onSubmit={addCommentSubmit}>
-    //     <div className="comment_left">
-    //       <div>  
-    //         <textarea className="text_comment" placeholder="New Comment . . ." required type="text"></textarea>
-    //       </div>
-    //       <div className="user_name">
-    //         <input className="input_user" required type="text" placeholder="UserName" alt="text"/>
-    //       </div>
-    //       <div>
-    //         <input className="input_data" required type="date" alt="date" placeholder="Date"/>
-    //       </div>
-    //         <div className="input_data">
-    //           <button className="btn_comment" type="submit">
-    //             Add Comment
-    //           </button>
-    //         </div>
-    //     </div>
-    //   </form>
-    // </div>

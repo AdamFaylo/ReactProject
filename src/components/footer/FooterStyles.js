@@ -2,8 +2,8 @@
 import styled from 'styled-components';
 
 export const Box = styled.div`
-padding: 60px 60px;
-background: #1e1b26;
+padding: 40px 40px;
+background: #000000;
 // position: absolute;
 bottom: 0;
 width: 100%;
@@ -50,7 +50,7 @@ transition: 200ms ease-in;
 }
 `;
 export const Heading = styled.p`
-font-size: 24px;
+font-size: 20px;
 color: #f5707d;
 margin-bottom: 40px;
 font-weight: bold;
@@ -60,5 +60,10 @@ display: flex;
 justify-content: center;
 text-align: center;
 justify-content: space-around;
+
+`;
+export const StyleIcon = styled.span`
+ text-decoration: none;
+ font-size:3rem;
 
 `;

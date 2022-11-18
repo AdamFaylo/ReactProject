@@ -16,7 +16,7 @@ const TopNav = () => {
         <NavLink to="/" className="navbar-brand logo-icon "></NavLink>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto nav_link">
+          <Nav className=" nav_link">
             <TopNavLink to="/" label="Home " className="me-auto nav_link" />
             <div>
               <DropDown2 />

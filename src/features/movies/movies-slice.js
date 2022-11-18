@@ -13,7 +13,7 @@ const movieUrl = (category, page) => {
         `&with_watch_monetization_types=flatrate`
 }
 
-const imageUrl = (image_path) => `https://image.tmdb.org/t/p/original${image_path}`
+export const imageUrl = (image_path) => `https://image.tmdb.org/t/p/original${image_path}`
 
 export const fetchMovies = createAsyncThunk(
     'movie/fetch',
@@ -46,6 +46,13 @@ const moviesSlice = createSlice({
             state.movies = action.payload;
             state.filterMovie = action.payload;
         },
+        filterMovie:(state,action) => {
+            if(action.payload.length < 1) {
+                state.filterMovie = state.movies
+                return
+            }
+            state.filterMovie = action.payload;
+        },
         deleteMovies: (state, action) => {
             if (!action.payload || action.payload === null)
                 return
@@ -63,11 +70,11 @@ const moviesSlice = createSlice({
         //     state.searchedJobs = [];
         //     state.searchedJobs.push(action.payload)
         // },
-        sortAzMovies: (state, action) => {
-            state.movies.sort((a, b) => (b.title < a.title ? 1 : -1));
+        sortAzMovies: (state) => {
+            state.filterMovie.sort((a, b) => (b.title < a.title ? 1 : -1));
         },
-        sortZaMovies: (state, action) => {
-            state.movies.sort((a, b) => (b.vote_average > a.vote_average ? 1 : -1));
+        sortZaMovies: (state) => {
+            state.filterMovie.sort((a, b) => (b.vote_average > a.vote_average ? 1 : -1));
         },
 
     },

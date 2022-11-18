@@ -39,7 +39,7 @@ export const DropDown2 = () => {
     <div>
     <Dropdown className="d_down">
       <Link to="/movies">
-        <Dropdown.Toggle variant="none" style={{border:'none',padding:'8px'}}>
+        <Dropdown.Toggle variant="none" style={{border:'none',padding:'0px'}}>
           Movies
         </Dropdown.Toggle>
       </Link>
