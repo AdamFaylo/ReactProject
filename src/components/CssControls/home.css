@@ -3,7 +3,7 @@
   width: 1024px;
   max-width: 1024px;
   color: white;
-  height: 100%;
+  height: 1485px;
 }
 .img_style {
   background: url(../Media/Images/georgia-vagim-ny-lHmsHYHk-unsplash.jpg);
@@ -15,7 +15,130 @@
 .main_2 {
   background: #323232;
   height: 294px;
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "a a b c d"
+    "a a e f g";
+  align-items: center;
+  justify-content: center;
+  padding: 37px;
 }
+.main_2 > div:nth-child(1) {
+  grid-area: a;
+  text-align: end;
+  padding-right: 2rem;
+}
+.main_2 > div:nth-child(2) {
+  grid-area: b;
+  background: white;
+  border-radius: 14px;
+  width: 142px;
+  height: 100px;
+  color: black;
+  padding: 11px;
+}
+.main_2 > div:nth-child(3) {
+  grid-area: c;
+  background: white;
+  border-radius: 14px;
+  width: 142px;
+  height: 100px;
+  color: black;
+  padding: 11px;
+}
+.main_2 > div:nth-child(4) {
+  grid-area: d;
+  background: white;
+  border-radius: 14px;
+  width: 142px;
+  height: 100px;
+  color: black;
+  padding: 11px;
+}
+.main_2 > div:nth-child(5) {
+  grid-area: e;
+  background: white;
+  border-radius: 14px;
+  width: 142px;
+  height: 100px;
+  color: black;
+  padding: 11px;
+}
+.main_2 > div:nth-child(6) {
+  grid-area: f;
+  background: white;
+  border-radius: 14px;
+  width: 142px;
+  height: 100px;
+  color: black;
+  padding: 11px;
+}
+.main_2 > div:nth-child(7) {
+  grid-area: g;
+  background: #e0b943;
+  border-radius: 14px;
+  width: 142px;
+  height: 100px;
+  color: black;
+  padding: 11px;
+}
+.main_2_box_2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.main_2_box_2 > h2 {
+  font-size: 20px;
+}
+.main_2_box_2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.main_2_box_3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.main_2_box_3 > h2 {
+  font-size: 20px;
+}
+.main_2_box_4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.main_2_box_4 > h2 {
+  font-size: 20px;
+}
+.main_2_box_5 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.main_2_box_5 > h2 {
+  font-size: 20px;
+}
+.main_2_box_6 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.main_2_box_6 > h2 {
+  font-size: 20px;
+}
+.main_2_box_7 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.main_2_box_7 > h2 {
+  font-size: 20px;
+}
+
+/*  */
 .main_3 {
   background: url(../Media/Images/mitch-nielsen-VUDJjCRXbHQ-unsplash.jpg);
   background-position: center;
@@ -25,23 +148,99 @@
 }
 .main_4 {
   background: #f0f0f0;
+  color: black;
   height: 250px;
+  /* display: flex;
+  align-items: center; */
+  display: grid;
+  grid-template-columns: repeat(6, 128px);
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  padding: 7rem;
 }
+.main_4 > div:nth-child(1) {
+ 
+}
+.main_4 > div:nth-child(2) {
+  border: solid 2px red;
+  background: white;
+  width: 100px;
+  height: 100px;
+}
+.main_4 > div:nth-child(3) {
+  border: solid 2px red;
+  background: white;
+  width: 100px;
+  height: 100px;
+}
+.main_4 > div:nth-child(4) {
+  border: solid 2px red;
+  background: white;
+  width: 100px;
+  height: 100px;
+}
+.main_4 > div:nth-child(5) {
+  border: solid 2px red;
+  background: white;
+  width: 100px;
+  height: 100px;
+}
+.main_4 > div:nth-child(6) {
+  border: solid 2px red;
+  background: white;
+  width: 100px;
+  height: 100px;
+}
+
 .main_5 {
   background: #e0b943;
-  width: 700px;
+  width: 744px;
   height: 100px;
   margin: 0 auto;
   position: relative;
   bottom: 18rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
 }
-
+.main_5 > div > h2 {
+  color: black;
+  font-size: 1.5rem;
+}
+.main_5 > button {
+  background: black;
+  color: #e0b943;
+  width: 250px;
+  border-radius: 6px;
+}
+.main_5_info {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
 .main_6 {
   color: black;
   height: 250px;
   position: relative;
   bottom: 6.2rem;
   border: solid 2px black;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  justify-items: center;
+  align-items: center;
+ 
+}
+.main_6>div:nth-child(1){
+  border: solid 2px red;
+}
+.main_6>div:nth-child(2){
+  border: solid 2px red;
+}
+.main_6>div:nth-child(3){
+  border: solid 2px red;
+  background: black;
+  color: white;
 }
 /* background: #e0b943ce; */
 

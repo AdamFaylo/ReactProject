@@ -5,12 +5,11 @@ import MyPhoto from "../components/Media/Images/AdamFaylo.png"
 import ImgExperience from "../components/Media/Images/mike.jpg"
 import logoCSS from "../components/Media/Images/icons8-css3.png"
 import logoJs from "../components/Media/Images/icons8-javascript.png"
- import logoReact from "../components/Media/Images/icons8-react-native-480.png"
+import logoReact from "../components/Media/Images/icons8-react-native-480.png"
 
 const About = () => {
   return (
     <div className="about_container">
-      <div className="spacer"></div>
       {/* 1 */}
       <div className="about_top">
         <div className="text_top">

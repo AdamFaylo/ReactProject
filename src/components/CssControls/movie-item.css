@@ -110,8 +110,7 @@
 }
 .sort_container {
   display: flex;
-  justify-content: flex-end;
-  justify-content: center;
+  align-items: center;
   /* width: 1281px;
   max-width: 1281px; */
   margin: 0 auto;
