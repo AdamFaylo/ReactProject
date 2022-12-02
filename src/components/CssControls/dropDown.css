@@ -7,3 +7,9 @@
 .d_menu {
   border:none;
 }
+.movie_drop_dwon{
+  border:0;
+}
+.movie_drop_dwon :hover{
+  background: red !important;
+}

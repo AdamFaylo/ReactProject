@@ -1,13 +1,11 @@
 import React from "react";
 import { Navbar, Container, Nav, NavLink } from "react-bootstrap";
 import TopNavLink from "./TopNavLink";
-import "../CssControls/center-nav.css";
 import { DropDown2 } from "../DropDown";
 import { useDispatch } from "react-redux";
+import "../CssControls/nav-bar.css";
 
 const TopNav = () => {
-  const styleNavCenter = {};
-
   const dispatch = useDispatch();
 
   return (
@@ -18,9 +16,7 @@ const TopNav = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className=" nav_link">
             <TopNavLink to="/" label="Home " className="me-auto nav_link" />
-            <div>
-              <DropDown2 />
-            </div>
+            <DropDown2 />
             <TopNavLink to="/favorites" label="Favorites" />
             <TopNavLink to="/about" label="About" />
             <TopNavLink to="/comments" label="Comment" />

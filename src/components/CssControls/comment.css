@@ -109,21 +109,11 @@
   width: 30rem;
 }
 
-/* 7 */
-/* 
-@media (max-width: 1399px) {
-  .container_comment_center {
-   
-  }
-} */
 @media (max-width: 1199px) {
   .container_comment_center {
     width: 50rem;
     grid-template-columns: repeat(2, 420px);
   }
-  /* .new_comment {
-    width: 18rem;
-  } */
   .text_comment {
     width: 18rem;
   }

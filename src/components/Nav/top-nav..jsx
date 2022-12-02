@@ -1,11 +1,11 @@
 import React from "react";
 import { Navbar, Container } from "react-bootstrap";
 import { NavLink, Link } from "react-router-dom";
-import "../CssControls/top-nav.css";
 import {useDispatch , useSelector } from 'react-redux'
 import Logo from "../Media/Images/pngwing.com (2).png"
 import { toggleShow } from "../../features/LogInSlice";
 import ButtonDarkMode from "../buttotDarkMode/ButtonDarkMode";
+import "../CssControls/nav-bar.css";
 
 const TopNav = () => {
 const isDark = useSelector(state => state.darkMode.isDark);

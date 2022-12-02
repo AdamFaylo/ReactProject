@@ -3,7 +3,10 @@
   width: 1024px;
   max-width: 1024px;
   color: white;
-  height: 1485px;
+  height: 100%;
+}
+p {
+  margin-bottom: 0;
 }
 .img_style {
   background: url(../Media/Images/georgia-vagim-ny-lHmsHYHk-unsplash.jpg);
@@ -11,13 +14,24 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 345px;
+  color: rgb(33, 30, 30);
 }
+.img_style > div {
+  background: #211d1d6e;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
 .main_2 {
   background: #323232;
   height: 294px;
   display: grid;
   grid-template-columns: repeat(4, 150px);
-  grid-template-rows: repeat(2, 1fr);
   grid-template-areas:
     "a a b c d"
     "a a e f g";
@@ -27,7 +41,6 @@
 }
 .main_2 > div:nth-child(1) {
   grid-area: a;
-  text-align: end;
   padding-right: 2rem;
 }
 .main_2 > div:nth-child(2) {
@@ -141,10 +154,30 @@
 /*  */
 .main_3 {
   background: url(../Media/Images/mitch-nielsen-VUDJjCRXbHQ-unsplash.jpg);
+  /* filter: brightness(60%); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 345px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  opacity: 0.9;
+}
+.main_3 > div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  padding: 45px;
+  z-index: 2;
+}
+.main_3 > div:nth-child(2) {
+  background: #8566477f;
+  color: #f5ba08;
+  padding-left: 3rem;
+  padding-top: 3rem;
+}
+.main_3 > div > h3 {
+  color: #000000;
+  font-weight: 800;
 }
 .main_4 {
   background: #f0f0f0;
@@ -160,39 +193,68 @@
   padding: 7rem;
 }
 .main_4 > div:nth-child(1) {
- 
+  font-weight: 600;
 }
 .main_4 > div:nth-child(2) {
-  border: solid 2px red;
+  border: solid #d0d0d0 2px;
   background: white;
   width: 100px;
   height: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  border-radius: 14px;
 }
 .main_4 > div:nth-child(3) {
-  border: solid 2px red;
+  border: solid #d0d0d0 2px;
   background: white;
   width: 100px;
   height: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  border-radius: 14px;
+  justify-content: center;
 }
 .main_4 > div:nth-child(4) {
-  border: solid 2px red;
+  border: solid #d0d0d0 2px;
   background: white;
   width: 100px;
   height: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  border-radius: 14px;
 }
 .main_4 > div:nth-child(5) {
-  border: solid 2px red;
+  border: solid #d0d0d0 2px;
   background: white;
   width: 100px;
   height: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
 }
 .main_4 > div:nth-child(6) {
-  border: solid 2px red;
+  border: solid #d0d0d0 2px;
   background: white;
   width: 100px;
   height: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  border-radius: 14px;
 }
 
+.main_4 > div > p {
+  font-size: 12px;
+}
+.main_4 > div > h3 {
+  font-size: 15px;
+  padding-left: 15px;
+}
 .main_5 {
   background: #e0b943;
   width: 744px;
@@ -207,7 +269,8 @@
 }
 .main_5 > div > h2 {
   color: black;
-  font-size: 1.5rem;
+  font-size: 15px;
+  padding: 1rem;
 }
 .main_5 > button {
   background: black;
@@ -221,160 +284,241 @@
 }
 .main_6 {
   color: black;
-  height: 250px;
+  height: 300px;
   position: relative;
   bottom: 6.2rem;
-  border: solid 2px black;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "a a a"
+    "b c d";
   justify-items: center;
   align-items: center;
- 
+  justify-content: center;
 }
-.main_6>div:nth-child(1){
-  border: solid 2px red;
+.main_6 > div:nth-child(1) {
+  grid-area: a;
 }
-.main_6>div:nth-child(2){
-  border: solid 2px red;
+.main_6 > div:nth-child(2) {
+  border: solid #d0d0d0 2px;
+  color: #000000;
+  grid-area: b;
+  height: 13rem;
+  width: 16rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 14px;
 }
-.main_6>div:nth-child(3){
-  border: solid 2px red;
-  background: black;
+.main_6 > div:nth-child(3) {
+  border: solid #d0d0d0 2px;
+  color: #000000;
+  grid-area: c;
+  height: 13rem;
+  width: 16rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 14px;
+}
+.main_6 > div:nth-child(4) {
+  border: solid #d0d0d0 2px;
+  background: rgb(0, 0, 0);
   color: white;
+  grid-area: d;
+  height: 13rem;
+  width: 16rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 14px;
 }
-/* background: #e0b943ce; */
-
-/* * {
-  f0f0f0
-    margin: 0; 
-    padding: 0;
+.main_6 > div > p {
+  display: flex;
+}
+.main_6 > div > h3 {
+  text-decoration: underline;
+}
+.main_7 {
+  color: black;
+  width: 100%;
+  height: 200px;
+  margin-top: -99px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.main_7 > div:nth-child(1) {
+  background: #e0b943;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.main_7 > div:nth-child(2) {
+  background: #d0d0d0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.main_8 {
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 180px;
+  background: url(../Media/Images/mike.jpg);
+}
+.main_8 > div {
+  background: #00000098;
+  height: 100%;
+}
+.main_9 {
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.main_10 {
+  background: #d0d0d0;
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.main_11 {
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #e0b943;
+}
+@media (max-width: 1199px) {
+  .top_main {
+    width: 1199px;
+  }
+}
+@media (max-width: 1199px) {
+  .top_main {
+    width: 1011px;
+  }
+}
+@media (max-width: 1011px) {
+  .top_main {
+    width: 767px;
+  }
+  .main_5 {
+    width: 590px;
+  }
+  .main_5 > div > h2 {
+    font-size: 1rem;
+  }
+  .main_2 {
+    grid-template-columns: repeat(4, 110px);
+  }
+  .main_2 > div:nth-child(2) {
+    width: 100px;
+  }
+  .main_2 > div:nth-child(3) {
+    width: 100px;
+  }
+  .main_2 > div:nth-child(4) {
+    width: 100px;
+  }
+  .main_2 > div:nth-child(5) {
+    width: 100px;
+  }
+  .main_2 > div:nth-child(6) {
+    width: 100px;
+  }
+  .main_2 > div:nth-child(7) {
+    width: 100px;
   }
   
-  body {
-    background-image: linear-gradient(to top, #13547a 0%, #80d0c7 100%); 
-    font-family: 'Roboto', sans-serif;
+  .main_4 {
+    grid-template-columns: repeat(6, 100px);
   }
-  
-  .container {
-    width: 100%;
+  .main_4 > div:nth-child(2) {
+    height: 80px;
+    width: 80px;
   }
-  
-  a {
-    text-decoration: none;
-    color: white; 
+  .main_4 > div:nth-child(3) {
+    height: 80px;
+    width: 80px;
   }
-  
-  nav {
-    width: 100%;
-    height: 70px;
+  .main_4 > div:nth-child(4) {
+    height: 80px;
+    width: 80px;
   }
-  
-  .nav-container {
-    width: 50%;
-    height: 100%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .main_4 > div:nth-child(5) {
+    height: 80px;
+    width: 80px;
   }
-  
-  .nav-item {
-    flex: 1;
-    height: 100%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .main_4 > div:nth-child(6) {
+    height: 80px;
+    width: 80px;
   }
-  
-  .subnav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    color: white; 
-    width: 100%; 
-    animation: BobbySnuggles; 
-    animation-duration: .5s;
-    animation-function: ease-in-out; 
+  .main_4 > div:nth-child(7) {
+    height: 80px;
+    width: 80px;
   }
-  
-  .subnav li {
-    padding: 20px;
-    list-style: none;  
+  .main_6 {
+    grid-template-columns: repeat(3, 215px);
   }
-  
-  .nav-item.has-subnav:hover .subnav {
-    display: inherit;
+  .main_6 > div:nth-child(2) {
+    height: 10rem;
+    width: 10rem;
   }
-  
-  .nav-item.has-subnav {
-    position: relative; 
+  .main_6 > div:nth-child(3) {
+    height: 10rem;
+    width: 10rem;
   }
-  
-  /*Time to apply widths for accordian to work
-  Width of image = 640px
-  total images = 5
-  so width of hovered image = 640px
-  width of un-hovered image = 40px - you can set this to anything
-  so total container width = 640 + 40*4 = 800px;
-  default width = 800/5 = 160px;
-  */
-
-/* .accordion {
-    width: 800px; height: 320px;
-    overflow: hidden;
-    margin: 100px auto;
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+  .main_6 > div:nth-child(4) {
+    height: 10rem;
+    width: 10rem;
   }
-  
-  .accordion ul {
-    width: 2000px;
+}
+/*  */
+@media (max-width: 767px) {
+  .top_main {
+    width: 620px;
   }
-  
-  .accordion li {
-    position: relative;
-    display: block;
-    width: 160px;
-    float: left;
-    border-left: 1px solid #888;
-    box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
-    transition: all 0.5s;
+  .main_3 {
+    grid-template-columns: repeat(2,310px);
+    height: 418px;
   }
-  
-  .accordion ul:hover li {width: 40px;}
-  .accordion ul li:hover {width: 640px;}
-  .accordion li img {
-    display: block;
+  .main_4 {
+    grid-template-columns: repeat(6, 102px);
   }
-  
-  .image_title {
-    background: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    left: 0; bottom: 10px;  
-    width: 640px; 
-  
+  .main_6 > div:nth-child(2) {
+    width: 10rem;
+    height: 10rem;
   }
-  .image_title a {
-    display: block;
-    text-align: center; 
-    color: #fff;
-    text-decoration: none;
-    padding: 20px;
+  .main_6 > div:nth-child(3) {
+    width: 10rem;
+    height: 10rem;
   }
-  
-  @keyframes BobbySnuggles {
-    0% {
-      opacity: 0;
-      transform: rotate(15deg) scale(0);
-    }
-    100% {
-      opacity: 1; 
-      transform: rotate(0deg) scale(1);
-    }
+  .main_6 > div:nth-child(4) {
+    width: 10rem;
+    height: 10rem;
   }
-  
-  @media screen and (max-width: 500px) {
-    nav {
-      background: pink; 
-    }
-  }  */
+}
+@media (max-width: 620px) {
+  .top_main {
+    width: 560px;
+  }
+}
+@media (max-width: 560px) {
+  .top_main {
+    width: 300px;
+  }
+}
+@media (max-width: 300px) {
+}

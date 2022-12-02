@@ -1,6 +1,9 @@
+.container_nav {
+  background: #eae3d2;
+  display: flex;
+}
 .nav_top {
   background: #000000 !important;
-  /* padding: 1rem; */
 }
 .spacer {
   flex-grow: 1;
@@ -9,7 +12,6 @@
   width: 5rem;
   height: 5rem;
 }
-
 .btn_taggle {
   margin: 0;
   border-radius: 3rem;
@@ -34,10 +36,12 @@
 .text_icon > p {
   margin: 0;
 }
-
 .text_icon_a {
   color: rgb(255, 0, 0);
 }
 .nav_link {
   display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
 }
