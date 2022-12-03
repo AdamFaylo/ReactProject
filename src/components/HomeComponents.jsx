@@ -7,7 +7,7 @@ const HomeComponents = () => {
     <div className="top_main">
       <div className="img_style">
         <div>
-          <h2>What is the purpose of the site? </h2>
+          <h2 className="text_top_main">Welcome to my website</h2>
           <p>
             The purpose of the description is to <br />
             bring the user the option to be updated on new/old <br />
@@ -50,7 +50,7 @@ const HomeComponents = () => {
           <h3>Lower Header</h3>
           <p>
             you can find web pages such as: <br />
-            HOME,MOVIES,FAVORITES,COMMENT,ABOUT ME
+            Home,Movies,Favorites,<br /> Comments,About
           </p>
         </div>
         <div>

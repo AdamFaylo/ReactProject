@@ -10,7 +10,7 @@ import {
   styleIcon,
 } from "./FooterStyles";
 import { FaFacebook } from "react-icons/fa";
-import { AiFillTwitterCircle, AiFillGithub } from "react-icons/ai";
+import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
 const Footer = () => {
   return (
     <Box>
@@ -18,10 +18,10 @@ const Footer = () => {
         <Row>
           <Column>
             <Heading>
-              <FooterLink href="https://github.com/AdamFaylo" target="_blank">
+              <FooterLink href="https://www.instagram.com/" target="_blank">
                 <i>
                   <styleIcon>
-                    <AiFillTwitterCircle /> Twitter
+                    <AiFillInstagram /> Instagram
                   </styleIcon>
                 </i>
               </FooterLink>

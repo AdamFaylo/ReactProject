@@ -1,11 +1,11 @@
 import React from 'react'
 import "../../src/components/CssControls/about.css";
 import { HiOutlinePencilAlt } from "react-icons/hi";
+import { BsFillPersonFill } from "react-icons/bs";
 import MyPhoto from "../components/Media/Images/AdamFaylo.png";
-import ImgExperience from "../components/Media/Images/mike.jpg";
+import logoHtml from "../components/Media/Images/icons8-html-5.png";
 import logoCSS from "../components/Media/Images/icons8-css3.png";
 import logoJs from "../components/Media/Images/icons8-javascript.png";
-import logoReact from "../components/Media/Images/icons8-react-native-480.png";
 
 const AboutComponents = () => {
   return (
@@ -26,19 +26,19 @@ const AboutComponents = () => {
       <div>
         <HiOutlinePencilAlt className="icon_pen" />
         <p>
-          GRAPHIC DESIGN<span></span>
+          Graphic Desing<span></span>
+        </p>
+      </div>
+      <div>
+        <BsFillPersonFill className="icon_pen" />
+        <p>
+        Programmer<span></span>
         </p>
       </div>
       <div>
         <HiOutlinePencilAlt className="icon_pen" />
         <p>
-          GRAPHIC DESIGN<span></span>
-        </p>
-      </div>
-      <div>
-        <HiOutlinePencilAlt className="icon_pen" />
-        <p>
-          GRAPHIC DESIGN<span></span>
+        Web Desing<span></span>
         </p>
       </div>
     </div>
@@ -66,6 +66,9 @@ const AboutComponents = () => {
           </p>
           <p>
             Language: <span>Hebrew/Russian/English</span>
+          </p>
+          <p>
+          Domain: <span>Junior full stack developer</span>
           </p>
         </div>
       </div>
@@ -96,11 +99,15 @@ const AboutComponents = () => {
     {/* 5 */}
     <div className="service">
       <div className="style_info_ex">
-        <h6>coco</h6>
-        <p>Lorem ipsum dolor sit amet consectetu </p>
+        <h3>Technology I used</h3>
+        <p>to build the site :</p>
       </div>
     </div>
     <div className="web_service">
+      <div>
+        <img className="program_style" src={logoHtml} alt="css" />
+        <p>HTML</p>
+      </div>
       <div>
         <img className="program_style" src={logoCSS} alt="css" />
         <p>CSS</p>
@@ -108,10 +115,6 @@ const AboutComponents = () => {
       <div>
         <img className="program_style" src={logoJs} alt="css" />
         <p>JS</p>
-      </div>
-      <div>
-        <img className="program_style" src={logoReact} alt="css" />
-        <p>REACT</p>
       </div>
     </div>
   </div>

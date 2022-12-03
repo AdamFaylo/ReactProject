@@ -5,12 +5,12 @@
   justify-content: center;
   /* gap: 2rem; */
   width: 1285px;
-  background: #8080803c;
+  background: #3b35353c;
 }
 .cellphone_container {
   width: 230px;
   height: 510px;
-  background-color: #141216;
+  background-color: #000000;
   margin: 40px auto 0 auto;
   box-shadow: 5px 5px 115px -14px black;
   border-radius: 25px;
@@ -22,7 +22,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 111 !important;
-
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   -webkit-mask-image: -webkit-gradient(
@@ -47,7 +46,6 @@
   align-items: center;
   padding: 1.5rem;
 }
-
 .watch_btn {
   display: flex;
   justify-content: center;
@@ -64,7 +62,6 @@
   font-size: 15px;
   display: flex;
 }
-
 .text_h1 {
   font-family: "Montserrat", sans-serif;
   color: #e7e7e7;
@@ -90,29 +87,25 @@
   color: #ff008a;
   font-size: 35px;
   position: relative;
-  bottom: 410px;
-  left: 11.5rem;
+  bottom: 16px;
+  left: 6rem;
 }
-
 .delete_movie {
   margin: 0;
   position: relative;
-  bottom: 1rem;
-  left: 3.2rem;
+  bottom: 10px;
+  left: 3rem;
   font-size: 40px;
   background: none;
   border: none;
   color: red;
 }
-
 .icon_style {
   font-size: 38px;
 }
 .sort_container {
   display: flex;
   align-items: center;
-  /* width: 1281px;
-  max-width: 1281px; */
   margin: 0 auto;
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -202,8 +195,22 @@
     width: 300px;
   }
   .sort_container {
-    width: 354px;
+    width: 345px;
+  }
+  .spacer {
+    flex-grow: 0;
+    padding-left: 5px;
   }
 }
 @media (max-width: 300px) {
+  .card_grid {
+    width: 260px;
+  }
+  .spacer {
+    flex-grow: 0;
+    padding-left: 5px;
+  }
+  .search_movie {
+    width: 11rem;
+  }
 }

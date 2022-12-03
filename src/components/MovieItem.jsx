@@ -64,7 +64,7 @@ const MoviesItem = ({ movie }) => {
                   dispatch(toggleFavorite(movie.id));
                 }}
               >
-                {movie.isFavorite && <FaHeart className="fa_heart" />}
+                {movie.isFavorite && <div className="fa_heart_container"><FaHeart className="fa_heart" /></div>}
                 {!movie.isFavorite && <FaRegHeart className="fa_heart" />}
               </div>
               <div className="delete_movie">

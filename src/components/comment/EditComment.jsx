@@ -7,7 +7,7 @@ import { IconTrash, IconEdit } from '@tabler/icons';
 import { useEffect } from "react";
 import "../CssControls/comment.css"
 import {editComment} from '../../features/comments/comments-slice';
-import { BsFillNutFill } from "react-icons/bs";
+
 const EditComment = () => {
   const comments = useSelector((state) => state.commentsReducer.comments);
   const dispatch = useDispatch();

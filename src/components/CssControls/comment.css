@@ -170,7 +170,6 @@
   .new_comment {
     width: 20rem;
   }
-
 }
 @media (max-width: 620px) {
 }
@@ -203,5 +202,24 @@
   }
   .btn_comment {
     width: 8rem;
+  }
+  .info_experience{
+    width: 200px;
+    grid-template-columns: repeat(1,200px);
+  }
+  .info_experience > div:nth-child(1){
+    width: 177px;
+    flex-direction: column;
+  }
+  .info_experience > div:nth-child(2){
+    width: 177px;
+    flex-direction: column;
+  }
+  .info_experience > div:nth-child(3){
+    width: 177px;
+    flex-direction: column;
+  }
+  .box_info_adam > div:nth-child(2){
+    left: 1rem;
   }
 }

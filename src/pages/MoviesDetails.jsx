@@ -77,43 +77,19 @@ const MovieDetails = () => {
               {movie.isFavorite && <FaHeart style={iconStyles} />}
               {!movie.isFavorite && <FaRegHeart style={iconStyles} />}
             </button>
-
-            {/* <img src={movie.poster_path} alt="" className="img_style"/> */}
-
             <div className="details">
               <div className="title1">{movie.title}</div>
-
               <div className="title2">{movie.release_date}</div>
             </div>
           </div>
-
           <div className="description">
             <div className="column1"></div>
-
             <div className="column2">
               <p className="movie_overview">{movie.overview}</p>
-
               <div className="avatars">
-                <a href="#" data-tooltip="Person 1" data-placement="top">
-                  <img
-                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/hobbit_avatar1.png"
-                    alt="avatar1"
-                  />
-                </a>
-
-                <a href="#" data-tooltip="Person 2" data-placement="top">
-                  <img
-                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/hobbit_avatar2.png"
-                    alt="avatar2"
-                  />
-                </a>
-
-                <a href="#" data-tooltip="Person 3" data-placement="top">
-                  <img
-                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/hobbit_avatar3.png"
-                    alt="avatar3"
-                  />
-                </a>
+                <a href="#" data-tooltip="Person 1" data-placement="top"></a>
+                <a href="#" data-tooltip="Person 2" data-placement="top"></a>
+                <a href="#" data-tooltip="Person 3" data-placement="top"></a>
               </div>
             </div>
           </div>
