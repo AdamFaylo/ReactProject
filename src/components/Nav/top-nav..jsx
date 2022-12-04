@@ -20,7 +20,7 @@ const dispatch = useDispatch()
     >
       <Container>
         {/* BARD: LOGO + app name */}
-        <NavLink to="/" className="navbar-brand justify-content-center nav_link">
+        <NavLink to="/" className="navbar-brand justify-content-center top_nav_logo">
           <img src={Logo} alt="Logo" className="img_logo"/>
           <span className="text-muted text_icon"><h1 className="text_icon_m">M</h1><p> ovie</p><h1 className="text_icon_a"> A</h1><p>pp</p></span>
         </NavLink>

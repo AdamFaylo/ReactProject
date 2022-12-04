@@ -4,7 +4,7 @@
   margin: 0 auto;
   justify-content: center;
   /* gap: 2rem; */
-  width: 1285px;
+  width: 1250px;
   background: #3b35353c;
 }
 .cellphone_container {
@@ -110,7 +110,7 @@
   padding-top: 2rem;
   padding-bottom: 2rem;
   border: none;
-  width: 1285px;
+  width: 1250px;
 }
 .btn_sort {
   border-radius: 35px;
@@ -132,7 +132,8 @@
 .search_movie {
   width: 30rem;
   height: 2rem;
-  border: #0000009a solid;
+  border: #000000 solid;
+  border-radius: 7px;
 }
 
 /* media query  */

@@ -1,3 +1,6 @@
+.container{
+ width: 1270px;;
+}
 .container_nav {
   background: #eae3d2;
   display: flex;
@@ -11,6 +14,9 @@
 .img_logo {
   width: 5rem;
   height: 5rem;
+}
+.top_nav_logo{
+  display: flex;
 }
 .btn_taggle {
   margin: 0;
@@ -44,4 +50,9 @@
   justify-content: center;
   justify-items: center;
   align-items: center;
+}
+.nav_link :hover{
+  background: rgb(103, 103, 103);
+  color: #e0b943ce;
+  height: 40px;
 }
