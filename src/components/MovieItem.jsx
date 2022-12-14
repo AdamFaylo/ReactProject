@@ -19,7 +19,6 @@ const MoviesItem = ({ movie }) => {
         onClick={(e) => {
           if (typeof e.target.className === "object") return;
           navigate(`/movies/${movie.id}`);
-          // Swal.fire("Clicked")
         }}
       >
         <div>

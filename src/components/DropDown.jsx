@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 import "../components/CssControls/dropDown.css"
 
 const DropDown = ({ options }) => {
-  // [{action,title,value?}] // Horror value = 30
-
   return (
     <select
       className="m-dropdown"

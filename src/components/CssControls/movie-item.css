@@ -94,7 +94,7 @@
   margin: 0;
   position: relative;
   bottom: 10px;
-  left: 3rem;
+  left: 2.9rem;
   font-size: 40px;
   background: none;
   border: none;
@@ -135,8 +135,6 @@
   border: #000000 solid;
   border-radius: 7px;
 }
-
-/* media query  */
 
 @media (max-width: 1399px) {
   .card_grid {

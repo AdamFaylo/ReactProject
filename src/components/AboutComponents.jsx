@@ -2,6 +2,7 @@ import React from 'react'
 import "../../src/components/CssControls/about.css";
 import { HiOutlinePencilAlt } from "react-icons/hi";
 import { BsFillPersonFill } from "react-icons/bs";
+import { MdLanguage } from "react-icons/md";
 import MyPhoto from "../components/Media/Images/AdamFaylo.png";
 import logoHtml from "../components/Media/Images/icons8-html-5.png";
 import logoCSS from "../components/Media/Images/icons8-css3.png";
@@ -36,7 +37,7 @@ const AboutComponents = () => {
         </p>
       </div>
       <div>
-        <HiOutlinePencilAlt className="icon_pen" />
+        <MdLanguage className="icon_pen" />
         <p>
         Web Desing<span></span>
         </p>

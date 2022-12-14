@@ -1,12 +1,11 @@
 import React from "react";
-import { useState } from "react"
-import { useDispatch, useSelector } from "react-redux"
-import { addComment, deleteComment } from "../../features/comments/comments-slice"
-import { v4 } from "uuid"
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addComment, deleteComment, editComment } from "../../features/comments/comments-slice";
+import { v4 } from "uuid";
 import { IconTrash, IconEdit } from '@tabler/icons';
 import { useEffect } from "react";
-import "../CssControls/comment.css"
-import {editComment} from '../../features/comments/comments-slice';
+import "../CssControls/comment.css";
 
 const EditComment = () => {
   const comments = useSelector((state) => state.commentsReducer.comments);

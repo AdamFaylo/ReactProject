@@ -9,7 +9,6 @@ p {
   margin-bottom: 0;
 }
 .img_style {
-  /* background: url(../Media/Images/georgia-vagim-ny-lHmsHYHk-unsplash.jpg); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -33,9 +32,6 @@ p {
   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
     0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
   color: #fccaff;
-  /* text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
-    0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000; */
-  /* color: #fff6a9; */
   font-family: "Sacramento", cursive;
   text-align: center;
   animation: blink 12s infinite;
@@ -61,9 +57,6 @@ p {
     color: #fccaff;
     text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
       0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
-    /* text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
-      0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-    color: #fff6a9; */
   }
 }
 
@@ -83,9 +76,6 @@ p {
   54%,
   56%,
   100% {
-    /*     color: #fccaff;
-    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
-      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
     text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
       0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
     color: #fff6a9;
@@ -215,11 +205,8 @@ p {
 .main_2_box_7 > h2 {
   font-size: 20px;
 }
-
-/*  */
 .main_3 {
   background: url(../Media/Images/mitch-nielsen-VUDJjCRXbHQ-unsplash.jpg);
-  /* filter: brightness(60%); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -253,8 +240,6 @@ p {
   background: #f0f0f0;
   color: black;
   height: 250px;
-  /* display: flex;
-  align-items: center; */
   display: grid;
   grid-template-columns: repeat(6, 128px);
   align-items: center;

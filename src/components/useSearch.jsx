@@ -68,7 +68,6 @@ return  <React.Fragment>
 export const MovieSearchComponent = ({type}) => {
 
     const { search } = useSearch(type)
-
     const doSearch = (e) => {
         let searchQuery = e.target.value
         search(searchQuery)
@@ -76,7 +75,6 @@ export const MovieSearchComponent = ({type}) => {
     return <div >
         <input className="search_movie" onChange={doSearch} type="text" placeholder="Search.."/>
     </div>
-
 }
 
 

@@ -1,6 +1,5 @@
 import React from "react";
 import "../components/CssControls/home.css";
-import { HiOutlinePencilAlt } from "react-icons/hi";
 
 const HomeComponents = () => {
   return (

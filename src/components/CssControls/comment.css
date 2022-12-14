@@ -1,5 +1,4 @@
-/* *********** */
-/* comment js  */
+
 .container_comment_center {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -38,8 +37,6 @@
   display: flex;
   justify-content: center;
 }
-/* ************ */
-/* edit comment */
 .container_edit {
   display: flex;
   flex-direction: column;
@@ -70,8 +67,6 @@
   font-size: 11px;
   font-weight: 600;
 }
-/* *********** */
-/* New comment */
 .new_comment {
   border: solid 1px;
   border-radius: 2px;

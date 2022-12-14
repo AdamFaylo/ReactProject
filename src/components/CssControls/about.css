@@ -76,8 +76,6 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding-top: 1rem;
-  /* width: 50em;
-  height: 25rem; */
 }
 .box_info_adam > div:nth-child(1) {
   background: #e0b943ce;
@@ -99,7 +97,7 @@ img {
 .text_info > h1 > span {
   color: #e0b943ce;
 }
-/* .box_info_adam>div:nth-child(2){} */
+
 .info_experience {
   height: 250px;
   background: white;

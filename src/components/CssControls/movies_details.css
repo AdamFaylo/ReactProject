@@ -7,11 +7,6 @@
 *:after {
   box-sizing: border-box;
 }
-/* a {
-  text-decoration: none;
-  color: #5c7fb8;
-} */
-
 a:hover {
   text-decoration: underline;
 }
@@ -40,7 +35,6 @@ a:hover {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-
 .cover {
   position: absolute;
   top: 160px;
@@ -49,7 +43,6 @@ a:hover {
   width: 20%;
   height: 45%;
 }
-
 .details {
   padding: 190px 0 0 280px;
 }
@@ -59,30 +52,20 @@ a:hover {
   margin-bottom: 13px;
   position: relative;
 }
-/* span {
-  top: 3px;
-  border-radius: 5px;
-  font-size: 14px;
-  padding: 0px 4px;
-} */
-
 .title2 {
   color: #c7c1ba;
   font-size: 23px;
   font-weight: 300;
   margin-bottom: 15px;
 }
-
 .likes {
   margin-left: 24px;
 }
-
 .likes:before {
   position: relative;
   top: 2px;
   padding-right: 7px;
 }
-
 .description {
   bottom: 0px;
   height: 200px;
@@ -90,7 +73,6 @@ a:hover {
   line-height: 26px;
   color: #b1b0ac;
 }
-
 .column1 {
   padding-left: 18px;
   padding-top: 120px;
@@ -98,7 +80,6 @@ a:hover {
   float: left;
   text-align: center;
 }
-
 .tag {
   background: white;
   border-radius: 10px;
@@ -108,11 +89,9 @@ a:hover {
   line-height: 35px;
   cursor: pointer;
 }
-
 .tag:hover {
   background: #ddd;
 }
-
 .column2 {
   padding-left: 41px;
   padding-top: 30px;
@@ -120,30 +99,23 @@ a:hover {
   width: 480px;
   float: left;
 }
-
 .avatars {
   margin-top: 23px;
 }
 img {
   cursor: pointer;
 }
-
 img:hover {
   opacity: 0.6;
 }
-
 a:hover {
   text-decoration: none;
 }
-
 fieldset,
 label {
   margin: 0;
   padding: 0;
 }
-
-/****** Style Star Rating Widget *****/
-
 .rating {
   border: none;
   float: left;
@@ -160,19 +132,14 @@ label {
   display: inline-block;
   content: "\f005";
 }
-
 .rating > .half:before {
   content: "\f089";
   position: absolute;
 }
-
 .rating > label {
   color: #ddd;
   float: right;
 }
-
-/***** CSS Magic to Highlight Stars on Hover *****/
-
 .rating > input:checked ~ label, /* show gold star when clicked */
 .rating:not(:checked) > label:hover, /* hover current star */
 .rating:not(:checked) > label:hover ~ label {
@@ -356,7 +323,6 @@ a[data-tooltip][data-placement="top"]::after {
     font-size: 15px;
   }
 }
-
 @media (max-width: 580px) {
   .container_details {
     width: 200px;
