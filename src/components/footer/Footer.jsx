@@ -18,7 +18,7 @@ const Footer = () => {
         <Row>
           <Column>
             <Heading>
-              <FooterLink href="https://www.instagram.com/" target="_blank">
+              <FooterLink href="https://linkedin.com/in/fayloadam/" target="_blank">
                 <i>
                   <styleIcon>
                     <AiFillInstagram /> Instagram
@@ -41,7 +41,7 @@ const Footer = () => {
           <Column>
             <Heading>
               {" "}
-              <FooterLink href="https://www.facebook.com/" target="_blank">
+              <FooterLink href="https://www.https://www.facebook.com/casca.dura.7.com/" target="_blank">
                 <i>
                   <span>
                     <FaFacebook /> Facebook
@@ -53,7 +53,7 @@ const Footer = () => {
           <Column>
             <Heading>
               <Heading>
-                <FooterLink href="https://web.whatsapp.com/" target="_blank">
+                <FooterLink href="https://api.whatsapp.com/send/?phone=972505949292&text&type=phone_number&app_absent=0" target="_blank">
                   <i>
                     <span>
                       <FaFacebook /> WhatspApp
